@@ -10,6 +10,6 @@
 
 @implementation TSMPerson
 
-
+@synthesize relation;
 
 @end

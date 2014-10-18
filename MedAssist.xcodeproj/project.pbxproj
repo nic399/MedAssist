@@ -7,36 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4198D7D219F234ED00374E32 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4198D7D119F234ED00374E32 /* libsqlite3.0.dylib */; };
+		4198D7D519F2373B00374E32 /* TSMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4198D7D419F2373B00374E32 /* TSMDBManager.m */; };
 		B911643619ECAF3C00CA5DEE /* TSMHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B911643519ECAF3C00CA5DEE /* TSMHomePageViewController.m */; };
 		B919937819F0309800296C9B /* TSMPresctriptionsListingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B919937719F0309800296C9B /* TSMPresctriptionsListingTableViewController.m */; };
 		B946D0B919EE03300054D85F /* TSMLogsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B946D0B819EE03300054D85F /* TSMLogsTabBarViewController.m */; };
 		B9470E1819EF77E500E7C3AB /* TSMEmergencyTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9470E1719EF77E500E7C3AB /* TSMEmergencyTabBarViewController.m */; };
 		B9498D9B19ECB94D00D3B1FE /* TSMProfileMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9498D9A19ECB94D00D3B1FE /* TSMProfileMenuViewController.m */; };
 		B9498DA219ECD0D200D3B1FE /* TSMTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9498DA119ECD0D200D3B1FE /* TSMTestsViewController.m */; };
+		B94A263C19F22F5E0023B733 /* TSMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = B94A263B19F22F5E0023B733 /* TSMPerson.m */; };
 		B958641819EEC4AD00E55928 /* TSMLoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B958641719EEC4AD00E55928 /* TSMLoginScreenViewController.m */; };
 		B958641B19EECF8000E55928 /* TSMLogOutSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = B958641A19EECF8000E55928 /* TSMLogOutSegue.m */; };
 		B960981919F05CA500C5BFBA /* dull-blue-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B960981819F05CA500C5BFBA /* dull-blue-circle.png */; };
 		B960981B19F05CBF00C5BFBA /* 1413159095_300__MA_Icon_transbg.png in Resources */ = {isa = PBXBuildFile; fileRef = B960981A19F05CBF00C5BFBA /* 1413159095_300__MA_Icon_transbg.png */; };
-		B976D0F119F19659003BB1F5 /* TSMAllergy.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D0F019F19659003BB1F5 /* TSMAllergy.m */; };
-		B976D11B19F1967B003BB1F5 /* TSMAppointment.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D0F419F1967B003BB1F5 /* TSMAppointment.m */; };
-		B976D11C19F1967B003BB1F5 /* TSMBloodP.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D0F619F1967B003BB1F5 /* TSMBloodP.m */; };
-		B976D11D19F1967B003BB1F5 /* TSMBMI.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D0F819F1967B003BB1F5 /* TSMBMI.m */; };
-		B976D11E19F1967B003BB1F5 /* TSMBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D0FA19F1967B003BB1F5 /* TSMBusiness.m */; };
-		B976D11F19F1967B003BB1F5 /* TSMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D0FC19F1967B003BB1F5 /* TSMContact.m */; };
-		B976D12019F1967B003BB1F5 /* TSMCustomData.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D0FE19F1967B003BB1F5 /* TSMCustomData.m */; };
-		B976D12119F1967B003BB1F5 /* TSMDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D10019F1967B003BB1F5 /* TSMDataPoint.m */; };
-		B976D12219F1967B003BB1F5 /* TSMDirective.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D10219F1967B003BB1F5 /* TSMDirective.m */; };
-		B976D12319F1967B003BB1F5 /* TSMGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D10419F1967B003BB1F5 /* TSMGeneral.m */; };
-		B976D12419F1967B003BB1F5 /* TSMGlucose.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D10619F1967B003BB1F5 /* TSMGlucose.m */; };
-		B976D12519F1967B003BB1F5 /* TSMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D10819F1967B003BB1F5 /* TSMLog.m */; };
-		B976D12619F1967B003BB1F5 /* TSMMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D10A19F1967B003BB1F5 /* TSMMedication.m */; };
-		B976D12719F1967B003BB1F5 /* TSMNote.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D10C19F1967B003BB1F5 /* TSMNote.m */; };
-		B976D12819F1967B003BB1F5 /* TSMNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D10E19F1967B003BB1F5 /* TSMNotification.m */; };
-		B976D12A19F1967B003BB1F5 /* TSMPrescription.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D11219F1967B003BB1F5 /* TSMPrescription.m */; };
-		B976D12B19F1967B003BB1F5 /* TSMProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D11419F1967B003BB1F5 /* TSMProfile.m */; };
-		B976D12C19F1967B003BB1F5 /* TSMReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D11619F1967B003BB1F5 /* TSMReminder.m */; };
-		B976D12D19F1967B003BB1F5 /* TSMTaxi.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D11819F1967B003BB1F5 /* TSMTaxi.m */; };
-		B976D12E19F1967B003BB1F5 /* TSMVaccination.m in Sources */ = {isa = PBXBuildFile; fileRef = B976D11A19F1967B003BB1F5 /* TSMVaccination.m */; };
+		B9813AF819F22D0E002BCDE3 /* TSMAllergy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AD119F22D0E002BCDE3 /* TSMAllergy.m */; };
+		B9813AF919F22D0E002BCDE3 /* TSMAppointment.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AD319F22D0E002BCDE3 /* TSMAppointment.m */; };
+		B9813AFA19F22D0E002BCDE3 /* TSMBloodP.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AD519F22D0E002BCDE3 /* TSMBloodP.m */; };
+		B9813AFB19F22D0E002BCDE3 /* TSMBMI.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AD719F22D0E002BCDE3 /* TSMBMI.m */; };
+		B9813AFC19F22D0E002BCDE3 /* TSMBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AD919F22D0E002BCDE3 /* TSMBusiness.m */; };
+		B9813AFD19F22D0E002BCDE3 /* TSMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813ADB19F22D0E002BCDE3 /* TSMContact.m */; };
+		B9813AFE19F22D0E002BCDE3 /* TSMCustomData.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813ADD19F22D0E002BCDE3 /* TSMCustomData.m */; };
+		B9813AFF19F22D0E002BCDE3 /* TSMDataPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813ADF19F22D0E002BCDE3 /* TSMDataPoint.m */; };
+		B9813B0019F22D0E002BCDE3 /* TSMDirective.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AE119F22D0E002BCDE3 /* TSMDirective.m */; };
+		B9813B0119F22D0E002BCDE3 /* TSMGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AE319F22D0E002BCDE3 /* TSMGeneral.m */; };
+		B9813B0219F22D0E002BCDE3 /* TSMGlucose.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AE519F22D0E002BCDE3 /* TSMGlucose.m */; };
+		B9813B0319F22D0E002BCDE3 /* TSMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AE719F22D0E002BCDE3 /* TSMLog.m */; };
+		B9813B0419F22D0E002BCDE3 /* TSMMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AE919F22D0E002BCDE3 /* TSMMedication.m */; };
+		B9813B0519F22D0E002BCDE3 /* TSMNote.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AEB19F22D0E002BCDE3 /* TSMNote.m */; };
+		B9813B0619F22D0E002BCDE3 /* TSMNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AED19F22D0E002BCDE3 /* TSMNotification.m */; };
+		B9813B0719F22D0E002BCDE3 /* TSMPrescription.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AEF19F22D0E002BCDE3 /* TSMPrescription.m */; };
+		B9813B0819F22D0E002BCDE3 /* TSMProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AF119F22D0E002BCDE3 /* TSMProfile.m */; };
+		B9813B0919F22D0E002BCDE3 /* TSMReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AF319F22D0E002BCDE3 /* TSMReminder.m */; };
+		B9813B0A19F22D0E002BCDE3 /* TSMTaxi.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AF519F22D0E002BCDE3 /* TSMTaxi.m */; };
+		B9813B0B19F22D0E002BCDE3 /* TSMVaccination.m in Sources */ = {isa = PBXBuildFile; fileRef = B9813AF719F22D0E002BCDE3 /* TSMVaccination.m */; };
 		B9909EA819EC44D600E8DB3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9909EA719EC44D600E8DB3A /* Foundation.framework */; };
 		B9909EAA19EC44D600E8DB3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9909EA919EC44D600E8DB3A /* CoreGraphics.framework */; };
 		B9909EAC19EC44D600E8DB3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9909EAB19EC44D600E8DB3A /* UIKit.framework */; };
@@ -80,6 +83,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4198D7D119F234ED00374E32 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		4198D7D319F2373B00374E32 /* TSMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMDBManager.h; path = Classes/TSMDBManager.h; sourceTree = "<group>"; };
+		4198D7D419F2373B00374E32 /* TSMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMDBManager.m; path = Classes/TSMDBManager.m; sourceTree = "<group>"; };
 		B911643419ECAF3C00CA5DEE /* TSMHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMHomePageViewController.h; sourceTree = "<group>"; };
 		B911643519ECAF3C00CA5DEE /* TSMHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMHomePageViewController.m; sourceTree = "<group>"; };
 		B919937619F0309800296C9B /* TSMPresctriptionsListingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMPresctriptionsListingTableViewController.h; sourceTree = "<group>"; };
@@ -94,52 +100,54 @@
 		B9498D9F19ECCBFB00D3B1FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/TSMAppointmentTabsViewController.m; sourceTree = "<group>"; };
 		B9498DA019ECD0D200D3B1FE /* TSMTestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMTestsViewController.h; sourceTree = "<group>"; };
 		B9498DA119ECD0D200D3B1FE /* TSMTestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMTestsViewController.m; sourceTree = "<group>"; };
+		B94A263A19F22F5E0023B733 /* TSMPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMPerson.h; path = Classes/TSMPerson.h; sourceTree = "<group>"; };
+		B94A263B19F22F5E0023B733 /* TSMPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMPerson.m; path = Classes/TSMPerson.m; sourceTree = "<group>"; };
 		B958641619EEC4AD00E55928 /* TSMLoginScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMLoginScreenViewController.h; sourceTree = "<group>"; };
 		B958641719EEC4AD00E55928 /* TSMLoginScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMLoginScreenViewController.m; sourceTree = "<group>"; };
 		B958641919EECF8000E55928 /* TSMLogOutSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMLogOutSegue.h; sourceTree = "<group>"; };
 		B958641A19EECF8000E55928 /* TSMLogOutSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMLogOutSegue.m; sourceTree = "<group>"; };
 		B960981819F05CA500C5BFBA /* dull-blue-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dull-blue-circle.png"; path = "Images/dull-blue-circle.png"; sourceTree = "<group>"; };
 		B960981A19F05CBF00C5BFBA /* 1413159095_300__MA_Icon_transbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1413159095_300__MA_Icon_transbg.png; path = Images/1413159095_300__MA_Icon_transbg.png; sourceTree = "<group>"; };
-		B976D0EF19F19659003BB1F5 /* TSMAllergy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMAllergy.h; path = ../CodeStuff/MedAssist/TSMAllergy.h; sourceTree = "<group>"; };
-		B976D0F019F19659003BB1F5 /* TSMAllergy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMAllergy.m; path = ../CodeStuff/MedAssist/TSMAllergy.m; sourceTree = "<group>"; };
-		B976D0F319F1967B003BB1F5 /* TSMAppointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMAppointment.h; path = ../CodeStuff/MedAssist/TSMAppointment.h; sourceTree = "<group>"; };
-		B976D0F419F1967B003BB1F5 /* TSMAppointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMAppointment.m; path = ../CodeStuff/MedAssist/TSMAppointment.m; sourceTree = "<group>"; };
-		B976D0F519F1967B003BB1F5 /* TSMBloodP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMBloodP.h; path = ../CodeStuff/MedAssist/TSMBloodP.h; sourceTree = "<group>"; };
-		B976D0F619F1967B003BB1F5 /* TSMBloodP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMBloodP.m; path = ../CodeStuff/MedAssist/TSMBloodP.m; sourceTree = "<group>"; };
-		B976D0F719F1967B003BB1F5 /* TSMBMI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMBMI.h; path = ../CodeStuff/MedAssist/TSMBMI.h; sourceTree = "<group>"; };
-		B976D0F819F1967B003BB1F5 /* TSMBMI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMBMI.m; path = ../CodeStuff/MedAssist/TSMBMI.m; sourceTree = "<group>"; };
-		B976D0F919F1967B003BB1F5 /* TSMBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMBusiness.h; path = ../CodeStuff/MedAssist/TSMBusiness.h; sourceTree = "<group>"; };
-		B976D0FA19F1967B003BB1F5 /* TSMBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMBusiness.m; path = ../CodeStuff/MedAssist/TSMBusiness.m; sourceTree = "<group>"; };
-		B976D0FB19F1967B003BB1F5 /* TSMContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMContact.h; path = ../CodeStuff/MedAssist/TSMContact.h; sourceTree = "<group>"; };
-		B976D0FC19F1967B003BB1F5 /* TSMContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMContact.m; path = ../CodeStuff/MedAssist/TSMContact.m; sourceTree = "<group>"; };
-		B976D0FD19F1967B003BB1F5 /* TSMCustomData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMCustomData.h; path = ../CodeStuff/MedAssist/TSMCustomData.h; sourceTree = "<group>"; };
-		B976D0FE19F1967B003BB1F5 /* TSMCustomData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMCustomData.m; path = ../CodeStuff/MedAssist/TSMCustomData.m; sourceTree = "<group>"; };
-		B976D0FF19F1967B003BB1F5 /* TSMDataPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMDataPoint.h; path = ../CodeStuff/MedAssist/TSMDataPoint.h; sourceTree = "<group>"; };
-		B976D10019F1967B003BB1F5 /* TSMDataPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMDataPoint.m; path = ../CodeStuff/MedAssist/TSMDataPoint.m; sourceTree = "<group>"; };
-		B976D10119F1967B003BB1F5 /* TSMDirective.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMDirective.h; path = ../CodeStuff/MedAssist/TSMDirective.h; sourceTree = "<group>"; };
-		B976D10219F1967B003BB1F5 /* TSMDirective.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMDirective.m; path = ../CodeStuff/MedAssist/TSMDirective.m; sourceTree = "<group>"; };
-		B976D10319F1967B003BB1F5 /* TSMGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMGeneral.h; path = ../CodeStuff/MedAssist/TSMGeneral.h; sourceTree = "<group>"; };
-		B976D10419F1967B003BB1F5 /* TSMGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMGeneral.m; path = ../CodeStuff/MedAssist/TSMGeneral.m; sourceTree = "<group>"; };
-		B976D10519F1967B003BB1F5 /* TSMGlucose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMGlucose.h; path = ../CodeStuff/MedAssist/TSMGlucose.h; sourceTree = "<group>"; };
-		B976D10619F1967B003BB1F5 /* TSMGlucose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMGlucose.m; path = ../CodeStuff/MedAssist/TSMGlucose.m; sourceTree = "<group>"; };
-		B976D10719F1967B003BB1F5 /* TSMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMLog.h; path = ../CodeStuff/MedAssist/TSMLog.h; sourceTree = "<group>"; };
-		B976D10819F1967B003BB1F5 /* TSMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMLog.m; path = ../CodeStuff/MedAssist/TSMLog.m; sourceTree = "<group>"; };
-		B976D10919F1967B003BB1F5 /* TSMMedication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMMedication.h; path = ../CodeStuff/MedAssist/TSMMedication.h; sourceTree = "<group>"; };
-		B976D10A19F1967B003BB1F5 /* TSMMedication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMMedication.m; path = ../CodeStuff/MedAssist/TSMMedication.m; sourceTree = "<group>"; };
-		B976D10B19F1967B003BB1F5 /* TSMNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMNote.h; path = ../CodeStuff/MedAssist/TSMNote.h; sourceTree = "<group>"; };
-		B976D10C19F1967B003BB1F5 /* TSMNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMNote.m; path = ../CodeStuff/MedAssist/TSMNote.m; sourceTree = "<group>"; };
-		B976D10D19F1967B003BB1F5 /* TSMNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMNotification.h; path = ../CodeStuff/MedAssist/TSMNotification.h; sourceTree = "<group>"; };
-		B976D10E19F1967B003BB1F5 /* TSMNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMNotification.m; path = ../CodeStuff/MedAssist/TSMNotification.m; sourceTree = "<group>"; };
-		B976D11119F1967B003BB1F5 /* TSMPrescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMPrescription.h; path = ../CodeStuff/MedAssist/TSMPrescription.h; sourceTree = "<group>"; };
-		B976D11219F1967B003BB1F5 /* TSMPrescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMPrescription.m; path = ../CodeStuff/MedAssist/TSMPrescription.m; sourceTree = "<group>"; };
-		B976D11319F1967B003BB1F5 /* TSMProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMProfile.h; path = ../CodeStuff/MedAssist/TSMProfile.h; sourceTree = "<group>"; };
-		B976D11419F1967B003BB1F5 /* TSMProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMProfile.m; path = ../CodeStuff/MedAssist/TSMProfile.m; sourceTree = "<group>"; };
-		B976D11519F1967B003BB1F5 /* TSMReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMReminder.h; path = ../CodeStuff/MedAssist/TSMReminder.h; sourceTree = "<group>"; };
-		B976D11619F1967B003BB1F5 /* TSMReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMReminder.m; path = ../CodeStuff/MedAssist/TSMReminder.m; sourceTree = "<group>"; };
-		B976D11719F1967B003BB1F5 /* TSMTaxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMTaxi.h; path = ../CodeStuff/MedAssist/TSMTaxi.h; sourceTree = "<group>"; };
-		B976D11819F1967B003BB1F5 /* TSMTaxi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMTaxi.m; path = ../CodeStuff/MedAssist/TSMTaxi.m; sourceTree = "<group>"; };
-		B976D11919F1967B003BB1F5 /* TSMVaccination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMVaccination.h; path = ../CodeStuff/MedAssist/TSMVaccination.h; sourceTree = "<group>"; };
-		B976D11A19F1967B003BB1F5 /* TSMVaccination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMVaccination.m; path = ../CodeStuff/MedAssist/TSMVaccination.m; sourceTree = "<group>"; };
+		B9813AD019F22D0E002BCDE3 /* TSMAllergy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMAllergy.h; path = Classes/TSMAllergy.h; sourceTree = "<group>"; };
+		B9813AD119F22D0E002BCDE3 /* TSMAllergy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMAllergy.m; path = Classes/TSMAllergy.m; sourceTree = "<group>"; };
+		B9813AD219F22D0E002BCDE3 /* TSMAppointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMAppointment.h; path = Classes/TSMAppointment.h; sourceTree = "<group>"; };
+		B9813AD319F22D0E002BCDE3 /* TSMAppointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMAppointment.m; path = Classes/TSMAppointment.m; sourceTree = "<group>"; };
+		B9813AD419F22D0E002BCDE3 /* TSMBloodP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMBloodP.h; path = Classes/TSMBloodP.h; sourceTree = "<group>"; };
+		B9813AD519F22D0E002BCDE3 /* TSMBloodP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMBloodP.m; path = Classes/TSMBloodP.m; sourceTree = "<group>"; };
+		B9813AD619F22D0E002BCDE3 /* TSMBMI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMBMI.h; path = Classes/TSMBMI.h; sourceTree = "<group>"; };
+		B9813AD719F22D0E002BCDE3 /* TSMBMI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMBMI.m; path = Classes/TSMBMI.m; sourceTree = "<group>"; };
+		B9813AD819F22D0E002BCDE3 /* TSMBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMBusiness.h; path = Classes/TSMBusiness.h; sourceTree = "<group>"; };
+		B9813AD919F22D0E002BCDE3 /* TSMBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMBusiness.m; path = Classes/TSMBusiness.m; sourceTree = "<group>"; };
+		B9813ADA19F22D0E002BCDE3 /* TSMContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMContact.h; path = Classes/TSMContact.h; sourceTree = "<group>"; };
+		B9813ADB19F22D0E002BCDE3 /* TSMContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMContact.m; path = Classes/TSMContact.m; sourceTree = "<group>"; };
+		B9813ADC19F22D0E002BCDE3 /* TSMCustomData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMCustomData.h; path = Classes/TSMCustomData.h; sourceTree = "<group>"; };
+		B9813ADD19F22D0E002BCDE3 /* TSMCustomData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMCustomData.m; path = Classes/TSMCustomData.m; sourceTree = "<group>"; };
+		B9813ADE19F22D0E002BCDE3 /* TSMDataPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMDataPoint.h; path = Classes/TSMDataPoint.h; sourceTree = "<group>"; };
+		B9813ADF19F22D0E002BCDE3 /* TSMDataPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMDataPoint.m; path = Classes/TSMDataPoint.m; sourceTree = "<group>"; };
+		B9813AE019F22D0E002BCDE3 /* TSMDirective.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMDirective.h; path = Classes/TSMDirective.h; sourceTree = "<group>"; };
+		B9813AE119F22D0E002BCDE3 /* TSMDirective.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMDirective.m; path = Classes/TSMDirective.m; sourceTree = "<group>"; };
+		B9813AE219F22D0E002BCDE3 /* TSMGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMGeneral.h; path = Classes/TSMGeneral.h; sourceTree = "<group>"; };
+		B9813AE319F22D0E002BCDE3 /* TSMGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMGeneral.m; path = Classes/TSMGeneral.m; sourceTree = "<group>"; };
+		B9813AE419F22D0E002BCDE3 /* TSMGlucose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMGlucose.h; path = Classes/TSMGlucose.h; sourceTree = "<group>"; };
+		B9813AE519F22D0E002BCDE3 /* TSMGlucose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMGlucose.m; path = Classes/TSMGlucose.m; sourceTree = "<group>"; };
+		B9813AE619F22D0E002BCDE3 /* TSMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMLog.h; path = Classes/TSMLog.h; sourceTree = "<group>"; };
+		B9813AE719F22D0E002BCDE3 /* TSMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMLog.m; path = Classes/TSMLog.m; sourceTree = "<group>"; };
+		B9813AE819F22D0E002BCDE3 /* TSMMedication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMMedication.h; path = Classes/TSMMedication.h; sourceTree = "<group>"; };
+		B9813AE919F22D0E002BCDE3 /* TSMMedication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMMedication.m; path = Classes/TSMMedication.m; sourceTree = "<group>"; };
+		B9813AEA19F22D0E002BCDE3 /* TSMNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMNote.h; path = Classes/TSMNote.h; sourceTree = "<group>"; };
+		B9813AEB19F22D0E002BCDE3 /* TSMNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMNote.m; path = Classes/TSMNote.m; sourceTree = "<group>"; };
+		B9813AEC19F22D0E002BCDE3 /* TSMNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMNotification.h; path = Classes/TSMNotification.h; sourceTree = "<group>"; };
+		B9813AED19F22D0E002BCDE3 /* TSMNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMNotification.m; path = Classes/TSMNotification.m; sourceTree = "<group>"; };
+		B9813AEE19F22D0E002BCDE3 /* TSMPrescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMPrescription.h; path = Classes/TSMPrescription.h; sourceTree = "<group>"; };
+		B9813AEF19F22D0E002BCDE3 /* TSMPrescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMPrescription.m; path = Classes/TSMPrescription.m; sourceTree = "<group>"; };
+		B9813AF019F22D0E002BCDE3 /* TSMProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMProfile.h; path = Classes/TSMProfile.h; sourceTree = "<group>"; };
+		B9813AF119F22D0E002BCDE3 /* TSMProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMProfile.m; path = Classes/TSMProfile.m; sourceTree = "<group>"; };
+		B9813AF219F22D0E002BCDE3 /* TSMReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMReminder.h; path = Classes/TSMReminder.h; sourceTree = "<group>"; };
+		B9813AF319F22D0E002BCDE3 /* TSMReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMReminder.m; path = Classes/TSMReminder.m; sourceTree = "<group>"; };
+		B9813AF419F22D0E002BCDE3 /* TSMTaxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMTaxi.h; path = Classes/TSMTaxi.h; sourceTree = "<group>"; };
+		B9813AF519F22D0E002BCDE3 /* TSMTaxi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMTaxi.m; path = Classes/TSMTaxi.m; sourceTree = "<group>"; };
+		B9813AF619F22D0E002BCDE3 /* TSMVaccination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMVaccination.h; path = Classes/TSMVaccination.h; sourceTree = "<group>"; };
+		B9813AF719F22D0E002BCDE3 /* TSMVaccination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMVaccination.m; path = Classes/TSMVaccination.m; sourceTree = "<group>"; };
 		B9909EA419EC44D600E8DB3A /* MedAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9909EA719EC44D600E8DB3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B9909EA919EC44D600E8DB3A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4198D7D219F234ED00374E32 /* libsqlite3.0.dylib in Frameworks */,
 				B9C4290719F019AC00420D08 /* AddressBook.framework in Frameworks */,
 				B9C4290519F019A800420D08 /* AddressBookUI.framework in Frameworks */,
 				B9909EAA19EC44D600E8DB3A /* CoreGraphics.framework in Frameworks */,
@@ -217,49 +226,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B976D0F219F19662003BB1F5 /* Classes */ = {
+		B9813B0C19F22D14002BCDE3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B976D0F319F1967B003BB1F5 /* TSMAppointment.h */,
-				B976D0F419F1967B003BB1F5 /* TSMAppointment.m */,
-				B976D0F519F1967B003BB1F5 /* TSMBloodP.h */,
-				B976D0F619F1967B003BB1F5 /* TSMBloodP.m */,
-				B976D0F719F1967B003BB1F5 /* TSMBMI.h */,
-				B976D0F819F1967B003BB1F5 /* TSMBMI.m */,
-				B976D0F919F1967B003BB1F5 /* TSMBusiness.h */,
-				B976D0FA19F1967B003BB1F5 /* TSMBusiness.m */,
-				B976D0FB19F1967B003BB1F5 /* TSMContact.h */,
-				B976D0FC19F1967B003BB1F5 /* TSMContact.m */,
-				B976D0FD19F1967B003BB1F5 /* TSMCustomData.h */,
-				B976D0FE19F1967B003BB1F5 /* TSMCustomData.m */,
-				B976D0FF19F1967B003BB1F5 /* TSMDataPoint.h */,
-				B976D10019F1967B003BB1F5 /* TSMDataPoint.m */,
-				B976D10119F1967B003BB1F5 /* TSMDirective.h */,
-				B976D10219F1967B003BB1F5 /* TSMDirective.m */,
-				B976D10319F1967B003BB1F5 /* TSMGeneral.h */,
-				B976D10419F1967B003BB1F5 /* TSMGeneral.m */,
-				B976D10519F1967B003BB1F5 /* TSMGlucose.h */,
-				B976D10619F1967B003BB1F5 /* TSMGlucose.m */,
-				B976D10719F1967B003BB1F5 /* TSMLog.h */,
-				B976D10819F1967B003BB1F5 /* TSMLog.m */,
-				B976D10919F1967B003BB1F5 /* TSMMedication.h */,
-				B976D10A19F1967B003BB1F5 /* TSMMedication.m */,
-				B976D10B19F1967B003BB1F5 /* TSMNote.h */,
-				B976D10C19F1967B003BB1F5 /* TSMNote.m */,
-				B976D10D19F1967B003BB1F5 /* TSMNotification.h */,
-				B976D10E19F1967B003BB1F5 /* TSMNotification.m */,
-				B976D11119F1967B003BB1F5 /* TSMPrescription.h */,
-				B976D11219F1967B003BB1F5 /* TSMPrescription.m */,
-				B976D11319F1967B003BB1F5 /* TSMProfile.h */,
-				B976D11419F1967B003BB1F5 /* TSMProfile.m */,
-				B976D11519F1967B003BB1F5 /* TSMReminder.h */,
-				B976D11619F1967B003BB1F5 /* TSMReminder.m */,
-				B976D11719F1967B003BB1F5 /* TSMTaxi.h */,
-				B976D11819F1967B003BB1F5 /* TSMTaxi.m */,
-				B976D11919F1967B003BB1F5 /* TSMVaccination.h */,
-				B976D11A19F1967B003BB1F5 /* TSMVaccination.m */,
-				B976D0F019F19659003BB1F5 /* TSMAllergy.m */,
-				B976D0EF19F19659003BB1F5 /* TSMAllergy.h */,
+				4198D7D319F2373B00374E32 /* TSMDBManager.h */,
+				4198D7D419F2373B00374E32 /* TSMDBManager.m */,
+				B94A263A19F22F5E0023B733 /* TSMPerson.h */,
+				B94A263B19F22F5E0023B733 /* TSMPerson.m */,
+				B9813AD119F22D0E002BCDE3 /* TSMAllergy.m */,
+				B9813AD219F22D0E002BCDE3 /* TSMAppointment.h */,
+				B9813AD319F22D0E002BCDE3 /* TSMAppointment.m */,
+				B9813AD419F22D0E002BCDE3 /* TSMBloodP.h */,
+				B9813AD519F22D0E002BCDE3 /* TSMBloodP.m */,
+				B9813AD619F22D0E002BCDE3 /* TSMBMI.h */,
+				B9813AD719F22D0E002BCDE3 /* TSMBMI.m */,
+				B9813AD819F22D0E002BCDE3 /* TSMBusiness.h */,
+				B9813AD919F22D0E002BCDE3 /* TSMBusiness.m */,
+				B9813ADA19F22D0E002BCDE3 /* TSMContact.h */,
+				B9813ADB19F22D0E002BCDE3 /* TSMContact.m */,
+				B9813ADC19F22D0E002BCDE3 /* TSMCustomData.h */,
+				B9813ADD19F22D0E002BCDE3 /* TSMCustomData.m */,
+				B9813ADE19F22D0E002BCDE3 /* TSMDataPoint.h */,
+				B9813ADF19F22D0E002BCDE3 /* TSMDataPoint.m */,
+				B9813AE019F22D0E002BCDE3 /* TSMDirective.h */,
+				B9813AE119F22D0E002BCDE3 /* TSMDirective.m */,
+				B9813AE219F22D0E002BCDE3 /* TSMGeneral.h */,
+				B9813AE319F22D0E002BCDE3 /* TSMGeneral.m */,
+				B9813AE419F22D0E002BCDE3 /* TSMGlucose.h */,
+				B9813AE519F22D0E002BCDE3 /* TSMGlucose.m */,
+				B9813AE619F22D0E002BCDE3 /* TSMLog.h */,
+				B9813AE719F22D0E002BCDE3 /* TSMLog.m */,
+				B9813AE819F22D0E002BCDE3 /* TSMMedication.h */,
+				B9813AE919F22D0E002BCDE3 /* TSMMedication.m */,
+				B9813AEA19F22D0E002BCDE3 /* TSMNote.h */,
+				B9813AEB19F22D0E002BCDE3 /* TSMNote.m */,
+				B9813AEC19F22D0E002BCDE3 /* TSMNotification.h */,
+				B9813AED19F22D0E002BCDE3 /* TSMNotification.m */,
+				B9813AEE19F22D0E002BCDE3 /* TSMPrescription.h */,
+				B9813AEF19F22D0E002BCDE3 /* TSMPrescription.m */,
+				B9813AF019F22D0E002BCDE3 /* TSMProfile.h */,
+				B9813AF119F22D0E002BCDE3 /* TSMProfile.m */,
+				B9813AF219F22D0E002BCDE3 /* TSMReminder.h */,
+				B9813AF319F22D0E002BCDE3 /* TSMReminder.m */,
+				B9813AF419F22D0E002BCDE3 /* TSMTaxi.h */,
+				B9813AF519F22D0E002BCDE3 /* TSMTaxi.m */,
+				B9813AF619F22D0E002BCDE3 /* TSMVaccination.h */,
+				B9813AF719F22D0E002BCDE3 /* TSMVaccination.m */,
+				B9813AD019F22D0E002BCDE3 /* TSMAllergy.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -267,7 +280,7 @@
 		B9909E9B19EC44D600E8DB3A = {
 			isa = PBXGroup;
 			children = (
-				B976D0F219F19662003BB1F5 /* Classes */,
+				B9813B0C19F22D14002BCDE3 /* Classes */,
 				B9909EE119EC537C00E8DB3A /* Images */,
 				B9909EAD19EC44D600E8DB3A /* MedAssist */,
 				B9909ECC19EC44D600E8DB3A /* MedAssistTests */,
@@ -288,6 +301,7 @@
 		B9909EA619EC44D600E8DB3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4198D7D119F234ED00374E32 /* libsqlite3.0.dylib */,
 				B9C4290619F019AC00420D08 /* AddressBook.framework */,
 				B9C4290419F019A800420D08 /* AddressBookUI.framework */,
 				B9909EA719EC44D600E8DB3A /* Foundation.framework */,
@@ -496,51 +510,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B976D12A19F1967B003BB1F5 /* TSMPrescription.m in Sources */,
 				B958641819EEC4AD00E55928 /* TSMLoginScreenViewController.m in Sources */,
-				B976D12419F1967B003BB1F5 /* TSMGlucose.m in Sources */,
+				B9813B0219F22D0E002BCDE3 /* TSMGlucose.m in Sources */,
 				B946D0B919EE03300054D85F /* TSMLogsTabBarViewController.m in Sources */,
-				B976D12119F1967B003BB1F5 /* TSMDataPoint.m in Sources */,
-				B976D11C19F1967B003BB1F5 /* TSMBloodP.m in Sources */,
-				B976D12E19F1967B003BB1F5 /* TSMVaccination.m in Sources */,
-				B976D12219F1967B003BB1F5 /* TSMDirective.m in Sources */,
+				B9813AFF19F22D0E002BCDE3 /* TSMDataPoint.m in Sources */,
+				B9813AFA19F22D0E002BCDE3 /* TSMBloodP.m in Sources */,
+				B9813B0019F22D0E002BCDE3 /* TSMDirective.m in Sources */,
+				B9813B0A19F22D0E002BCDE3 /* TSMTaxi.m in Sources */,
 				B9909EB419EC44D600E8DB3A /* main.m in Sources */,
-				B976D0F119F19659003BB1F5 /* TSMAllergy.m in Sources */,
+				B9813AF819F22D0E002BCDE3 /* TSMAllergy.m in Sources */,
 				B9909EB819EC44D600E8DB3A /* TSMAppDelegate.m in Sources */,
 				B9909EE419EC7A7100E8DB3A /* TSMMenuItemViewController.m in Sources */,
-				B976D12719F1967B003BB1F5 /* TSMNote.m in Sources */,
-				B976D12319F1967B003BB1F5 /* TSMGeneral.m in Sources */,
-				B976D12619F1967B003BB1F5 /* TSMMedication.m in Sources */,
+				B9813B0519F22D0E002BCDE3 /* TSMNote.m in Sources */,
+				B9813B0119F22D0E002BCDE3 /* TSMGeneral.m in Sources */,
+				B9813B0719F22D0E002BCDE3 /* TSMPrescription.m in Sources */,
+				B9813B0419F22D0E002BCDE3 /* TSMMedication.m in Sources */,
 				B919937819F0309800296C9B /* TSMPresctriptionsListingTableViewController.m in Sources */,
-				B976D12B19F1967B003BB1F5 /* TSMProfile.m in Sources */,
 				B99B845919EEF8B700239545 /* TSMAllAppointmentsViewController.m in Sources */,
-				B976D11D19F1967B003BB1F5 /* TSMBMI.m in Sources */,
+				B9813AFB19F22D0E002BCDE3 /* TSMBMI.m in Sources */,
 				B9C4290A19F01DC500420D08 /* TSMAddContactViewController.m in Sources */,
 				B9498DA219ECD0D200D3B1FE /* TSMTestsViewController.m in Sources */,
 				B9498D9B19ECB94D00D3B1FE /* TSMProfileMenuViewController.m in Sources */,
-				B976D11B19F1967B003BB1F5 /* TSMAppointment.m in Sources */,
+				B9813AF919F22D0E002BCDE3 /* TSMAppointment.m in Sources */,
 				B9909EBE19EC44D600E8DB3A /* TSMViewController.m in Sources */,
+				B9813B0B19F22D0E002BCDE3 /* TSMVaccination.m in Sources */,
 				B9C4290D19F02E2100420D08 /* TSMPrescriptionsTableViewCell.m in Sources */,
 				B99B846519EEF8F700239545 /* TSMRefillAppointmentsViewController.m in Sources */,
+				B9813B0919F22D0E002BCDE3 /* TSMReminder.m in Sources */,
 				B99B846819EEF8FF00239545 /* TSMOtherAppointmentsViewController.m in Sources */,
 				B9C4291019F02F2800420D08 /* TSMPrescriptionsListViewController.m in Sources */,
-				B976D12019F1967B003BB1F5 /* TSMCustomData.m in Sources */,
+				B9813AFE19F22D0E002BCDE3 /* TSMCustomData.m in Sources */,
 				B9A48B1E19EF6CA600C0BC05 /* TSMPrescriptionsTabBarViewController.m in Sources */,
 				B99B846219EEF8EC00239545 /* TSMTestsAppointmentsViewController.m in Sources */,
-				B976D12D19F1967B003BB1F5 /* TSMTaxi.m in Sources */,
 				B958641B19EECF8000E55928 /* TSMLogOutSegue.m in Sources */,
-				B976D11E19F1967B003BB1F5 /* TSMBusiness.m in Sources */,
+				B9813AFC19F22D0E002BCDE3 /* TSMBusiness.m in Sources */,
 				B99B845C19EEF8C600239545 /* TSMDoctorAppointmentsViewController.m in Sources */,
-				B976D12819F1967B003BB1F5 /* TSMNotification.m in Sources */,
+				B9813B0619F22D0E002BCDE3 /* TSMNotification.m in Sources */,
 				B9DD342F19ECD94E0008F951 /* TSMTestsPageViewController.m in Sources */,
-				B976D12519F1967B003BB1F5 /* TSMLog.m in Sources */,
+				B9813B0319F22D0E002BCDE3 /* TSMLog.m in Sources */,
 				B9DEDF1119EEFA1600C7077D /* TSMAppointmentsTabBarViewController.m in Sources */,
-				B976D12C19F1967B003BB1F5 /* TSMReminder.m in Sources */,
 				B9470E1819EF77E500E7C3AB /* TSMEmergencyTabBarViewController.m in Sources */,
-				B976D11F19F1967B003BB1F5 /* TSMContact.m in Sources */,
+				B9813AFD19F22D0E002BCDE3 /* TSMContact.m in Sources */,
+				B9813B0819F22D0E002BCDE3 /* TSMProfile.m in Sources */,
 				B9909EE019EC490100E8DB3A /* TSMNewUserViewController.m in Sources */,
 				B911643619ECAF3C00CA5DEE /* TSMHomePageViewController.m in Sources */,
 				B99B845F19EEF8DB00239545 /* TSMSpecialistsAppointmentsViewController.m in Sources */,
+				4198D7D519F2373B00374E32 /* TSMDBManager.m in Sources */,
+				B94A263C19F22F5E0023B733 /* TSMPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

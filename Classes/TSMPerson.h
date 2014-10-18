@@ -9,18 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "TSMContact.h"
 
-typedef enum : NSUInteger {
+typedef enum NSUIInteger{
     Family,
     Doctor,
-    Pharmasist,
+    Pharmacist,
     Other
-} Relationship;
+}
+Relationship;
 
 @interface TSMPerson : TSMContact
+{
+    Relationship relation;
+}
 
 @property NSString *firstName;
 @property NSString *lastName;
-@property enum Relationship relation;
+@property (nonatomic) Relationship relation;
 @property NSString *address;
 
 
