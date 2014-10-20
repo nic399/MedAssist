@@ -10,6 +10,7 @@ static TSMDBManager *sharedInstance = nil;
 static sqlite3 *database = nil;
 static sqlite3_stmt *statement = nil;
 
+
 @implementation TSMDBManager
 
 +(TSMDBManager*)getSharedInstance{
@@ -60,14 +61,19 @@ static sqlite3_stmt *statement = nil;
             "create table if not exists appointments (appointmentId integer PRIMARY KEY, appointmentName text, type text, place text, dayTime datetime, specialInstructions blob, recurrence bool, recurrenceId integer,userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:appointmentsTable_sql_stmt errMsg:errorMsg];
             
-            //Prescriptions Table
-            const char *prescriptionsTable_sql_stmt =
-            "create table if not exists prescriptions (prescriptionId integer PRIMARY KEY, prescriptionName text, purpose blob, specialInstructions blob, frequency int, time datetime, end_date datetime, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
-            isSuccess=[self createTableHelper:prescriptionsTable_sql_stmt errMsg:errorMsg];
+            //Medications Table
+            const char *medicationsTable_sql_stmt =
+            "create table if not exists medications (medicationId integer PRIMARY KEY, medicationName text, purpose blob, specialInstructions blob, frequency int, time datetime, end_date datetime, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            isSuccess=[self createTableHelper:medicationsTable_sql_stmt errMsg:errorMsg];
+            
+            //Directives Table
+            const char *directivesTable_sql_stmt =
+            "create table if not exists directives (directivesId integer PRIMARY KEY, directiveName text, specialInstructions blob, frequency int, time datetime, end_date datetime, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            isSuccess=[self createTableHelper:directivesTable_sql_stmt errMsg:errorMsg];
             
             //Allergies Table
             const char  *allergiesTable_sql_stmt =
-            "create table if not exists allergies (allergyId integer PRIMARY KEY, allergyName text,userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            "create table if not exists allergies (allergyId integer PRIMARY KEY, allergyName text, effects blob, severity text, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:allergiesTable_sql_stmt errMsg:errorMsg];
             
             //Vaccinations Table
@@ -91,7 +97,7 @@ static sqlite3_stmt *statement = nil;
         != SQLITE_OK)
     {
         isSuccess = NO;
-        NSLog(@"Failed to create table user");
+        NSLog(@"Failed to create table");
     }
     sqlite3_close(database);
     return  isSuccess;
@@ -112,10 +118,70 @@ static sqlite3_stmt *statement = nil;
                                 else {
                                     return NO;
                                 }
-                                //sqlite3_reset(statement);
+                                sqlite3_reset(statement);
     }
                                 return NO;
     
+}
+
+- (BOOL) saveAllergy:(NSString* )allergyName severity:(NSString*)severity effects:(NSString*)effects;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into allergies (allergyName , effects , severity , userId) values (\"%@\",\"%@\", \"%@\",\"%d\")", allergyName, effects, severity, 100];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        sqlite3_reset(statement);
+    }
+    return NO;
+}
+
+- (BOOL) saveMedication:(NSString*)medicationName purpose:(NSString*)purpose instructions:(NSString*)instructions frequency:(NSInteger)frequency date:(NSString*)date;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into medications (medicationName, purpose, specialInstructions, frequency, time) values (\"%@\",\"%@\", \"%@\",\"%ld\", \"%@\")", medicationName, purpose, instructions,(long)frequency, date];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        sqlite3_reset(statement);
+    }
+    return NO;
+}
+
+- (BOOL) saveDirective:(NSString* )directiveName instructions:(NSString*)instructions frequency:(NSInteger)frequency date:(NSString*)date;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into directives (directiveName, specialInstructions, frequency int, time, end_date) values (\"%@\",\"%@\",\"%ld\",\"%@\")", directiveName, instructions,(long)frequency,date];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        sqlite3_reset(statement);
+    }
+    return NO;
 }
 
 - (NSArray*) findByUserName:(NSString*)userName;

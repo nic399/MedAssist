@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412AE08419F459B900A60F6D /* TSMAddDirective.m in Sources */ = {isa = PBXBuildFile; fileRef = 412AE08319F459B900A60F6D /* TSMAddDirective.m */; };
+		412AE08719F45F8C00A60F6D /* TSMAddMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = 412AE08619F45F8C00A60F6D /* TSMAddMedication.m */; };
 		4198D7D219F234ED00374E32 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4198D7D119F234ED00374E32 /* libsqlite3.0.dylib */; };
 		4198D7D519F2373B00374E32 /* TSMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4198D7D419F2373B00374E32 /* TSMDBManager.m */; };
+		4198D7D919F440CF00374E32 /* TSMAddAllergy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4198D7D819F440CF00374E32 /* TSMAddAllergy.m */; };
+		41AA677319F4B378007298FC /* TSMListMedications.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AA677219F4B378007298FC /* TSMListMedications.m */; };
+		41AA677619F4BA56007298FC /* TSMListDirectives.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AA677519F4BA56007298FC /* TSMListDirectives.m */; };
+		41AA677919F4BD49007298FC /* TSMPrescriptionsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AA677819F4BD49007298FC /* TSMPrescriptionsList.m */; };
 		B911643619ECAF3C00CA5DEE /* TSMHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B911643519ECAF3C00CA5DEE /* TSMHomePageViewController.m */; };
-		B919937819F0309800296C9B /* TSMPresctriptionsListingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B919937719F0309800296C9B /* TSMPresctriptionsListingTableViewController.m */; };
 		B946D0B919EE03300054D85F /* TSMLogsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B946D0B819EE03300054D85F /* TSMLogsTabBarViewController.m */; };
 		B9470E1819EF77E500E7C3AB /* TSMEmergencyTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9470E1719EF77E500E7C3AB /* TSMEmergencyTabBarViewController.m */; };
 		B9498D9B19ECB94D00D3B1FE /* TSMProfileMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9498D9A19ECB94D00D3B1FE /* TSMProfileMenuViewController.m */; };
@@ -66,8 +71,6 @@
 		B9C4290519F019A800420D08 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C4290419F019A800420D08 /* AddressBookUI.framework */; };
 		B9C4290719F019AC00420D08 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C4290619F019AC00420D08 /* AddressBook.framework */; };
 		B9C4290A19F01DC500420D08 /* TSMAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C4290919F01DC500420D08 /* TSMAddContactViewController.m */; };
-		B9C4290D19F02E2100420D08 /* TSMPrescriptionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C4290C19F02E2100420D08 /* TSMPrescriptionsTableViewCell.m */; };
-		B9C4291019F02F2800420D08 /* TSMPrescriptionsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C4290F19F02F2700420D08 /* TSMPrescriptionsListViewController.m */; };
 		B9DD342F19ECD94E0008F951 /* TSMTestsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DD342E19ECD94E0008F951 /* TSMTestsPageViewController.m */; };
 		B9DEDF1119EEFA1600C7077D /* TSMAppointmentsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DEDF1019EEFA1600C7077D /* TSMAppointmentsTabBarViewController.m */; };
 /* End PBXBuildFile section */
@@ -83,13 +86,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		412AE08219F459B900A60F6D /* TSMAddDirective.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMAddDirective.h; sourceTree = "<group>"; };
+		412AE08319F459B900A60F6D /* TSMAddDirective.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMAddDirective.m; sourceTree = "<group>"; };
+		412AE08519F45F8C00A60F6D /* TSMAddMedication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMAddMedication.h; sourceTree = "<group>"; };
+		412AE08619F45F8C00A60F6D /* TSMAddMedication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMAddMedication.m; sourceTree = "<group>"; };
 		4198D7D119F234ED00374E32 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		4198D7D319F2373B00374E32 /* TSMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSMDBManager.h; path = Classes/TSMDBManager.h; sourceTree = "<group>"; };
 		4198D7D419F2373B00374E32 /* TSMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSMDBManager.m; path = Classes/TSMDBManager.m; sourceTree = "<group>"; };
+		4198D7D719F440CF00374E32 /* TSMAddAllergy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMAddAllergy.h; sourceTree = "<group>"; };
+		4198D7D819F440CF00374E32 /* TSMAddAllergy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMAddAllergy.m; sourceTree = "<group>"; };
+		41AA677119F4B378007298FC /* TSMListMedications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMListMedications.h; sourceTree = "<group>"; };
+		41AA677219F4B378007298FC /* TSMListMedications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMListMedications.m; sourceTree = "<group>"; };
+		41AA677419F4BA56007298FC /* TSMListDirectives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMListDirectives.h; sourceTree = "<group>"; };
+		41AA677519F4BA56007298FC /* TSMListDirectives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMListDirectives.m; sourceTree = "<group>"; };
+		41AA677719F4BD49007298FC /* TSMPrescriptionsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMPrescriptionsList.h; sourceTree = "<group>"; };
+		41AA677819F4BD49007298FC /* TSMPrescriptionsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMPrescriptionsList.m; sourceTree = "<group>"; };
 		B911643419ECAF3C00CA5DEE /* TSMHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMHomePageViewController.h; sourceTree = "<group>"; };
 		B911643519ECAF3C00CA5DEE /* TSMHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMHomePageViewController.m; sourceTree = "<group>"; };
-		B919937619F0309800296C9B /* TSMPresctriptionsListingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMPresctriptionsListingTableViewController.h; sourceTree = "<group>"; };
-		B919937719F0309800296C9B /* TSMPresctriptionsListingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMPresctriptionsListingTableViewController.m; sourceTree = "<group>"; };
 		B946D0B719EE03300054D85F /* TSMLogsTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMLogsTabBarViewController.h; sourceTree = "<group>"; };
 		B946D0B819EE03300054D85F /* TSMLogsTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMLogsTabBarViewController.m; sourceTree = "<group>"; };
 		B9470E1619EF77E500E7C3AB /* TSMEmergencyTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMEmergencyTabBarViewController.h; sourceTree = "<group>"; };
@@ -189,10 +202,6 @@
 		B9C4290619F019AC00420D08 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		B9C4290819F01DC500420D08 /* TSMAddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMAddContactViewController.h; sourceTree = "<group>"; };
 		B9C4290919F01DC500420D08 /* TSMAddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMAddContactViewController.m; sourceTree = "<group>"; };
-		B9C4290B19F02E2100420D08 /* TSMPrescriptionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMPrescriptionsTableViewCell.h; sourceTree = "<group>"; };
-		B9C4290C19F02E2100420D08 /* TSMPrescriptionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMPrescriptionsTableViewCell.m; sourceTree = "<group>"; };
-		B9C4290E19F02F2700420D08 /* TSMPrescriptionsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMPrescriptionsListViewController.h; sourceTree = "<group>"; };
-		B9C4290F19F02F2700420D08 /* TSMPrescriptionsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMPrescriptionsListViewController.m; sourceTree = "<group>"; };
 		B9DD342D19ECD94E0008F951 /* TSMTestsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMTestsPageViewController.h; sourceTree = "<group>"; };
 		B9DD342E19ECD94E0008F951 /* TSMTestsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMTestsPageViewController.m; sourceTree = "<group>"; };
 		B9DEDF0F19EEFA1600C7077D /* TSMAppointmentsTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMAppointmentsTabBarViewController.h; sourceTree = "<group>"; };
@@ -226,6 +235,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4198D7D619F437AE00374E32 /* Prescriptions */ = {
+			isa = PBXGroup;
+			children = (
+				B9A48B1C19EF6CA600C0BC05 /* TSMPrescriptionsTabBarViewController.h */,
+				B9A48B1D19EF6CA600C0BC05 /* TSMPrescriptionsTabBarViewController.m */,
+				4198D7D719F440CF00374E32 /* TSMAddAllergy.h */,
+				4198D7D819F440CF00374E32 /* TSMAddAllergy.m */,
+				412AE08219F459B900A60F6D /* TSMAddDirective.h */,
+				412AE08319F459B900A60F6D /* TSMAddDirective.m */,
+				412AE08519F45F8C00A60F6D /* TSMAddMedication.h */,
+				412AE08619F45F8C00A60F6D /* TSMAddMedication.m */,
+				41AA677119F4B378007298FC /* TSMListMedications.h */,
+				41AA677219F4B378007298FC /* TSMListMedications.m */,
+				41AA677419F4BA56007298FC /* TSMListDirectives.h */,
+				41AA677519F4BA56007298FC /* TSMListDirectives.m */,
+				41AA677719F4BD49007298FC /* TSMPrescriptionsList.h */,
+				41AA677819F4BD49007298FC /* TSMPrescriptionsList.m */,
+			);
+			name = Prescriptions;
+			sourceTree = "<group>";
+		};
 		B9813B0C19F22D14002BCDE3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,25 +345,18 @@
 		B9909EAD19EC44D600E8DB3A /* MedAssist */ = {
 			isa = PBXGroup;
 			children = (
+				4198D7D619F437AE00374E32 /* Prescriptions */,
 				B9498D9919ECB94D00D3B1FE /* TSMProfileMenuViewController.h */,
 				B9498D9A19ECB94D00D3B1FE /* TSMProfileMenuViewController.m */,
 				B9909EB619EC44D600E8DB3A /* TSMAppDelegate.h */,
 				B9909EB719EC44D600E8DB3A /* TSMAppDelegate.m */,
 				B9909EB919EC44D600E8DB3A /* Main.storyboard */,
-				B919937619F0309800296C9B /* TSMPresctriptionsListingTableViewController.h */,
-				B919937719F0309800296C9B /* TSMPresctriptionsListingTableViewController.m */,
 				B9C4290819F01DC500420D08 /* TSMAddContactViewController.h */,
 				B9C4290919F01DC500420D08 /* TSMAddContactViewController.m */,
-				B9C4290B19F02E2100420D08 /* TSMPrescriptionsTableViewCell.h */,
-				B9C4290C19F02E2100420D08 /* TSMPrescriptionsTableViewCell.m */,
-				B9C4290E19F02F2700420D08 /* TSMPrescriptionsListViewController.h */,
-				B9C4290F19F02F2700420D08 /* TSMPrescriptionsListViewController.m */,
 				B9470E1619EF77E500E7C3AB /* TSMEmergencyTabBarViewController.h */,
 				B9470E1719EF77E500E7C3AB /* TSMEmergencyTabBarViewController.m */,
 				B9DEDF0F19EEFA1600C7077D /* TSMAppointmentsTabBarViewController.h */,
 				B9DEDF1019EEFA1600C7077D /* TSMAppointmentsTabBarViewController.m */,
-				B9A48B1C19EF6CA600C0BC05 /* TSMPrescriptionsTabBarViewController.h */,
-				B9A48B1D19EF6CA600C0BC05 /* TSMPrescriptionsTabBarViewController.m */,
 				B99B846319EEF8F700239545 /* TSMRefillAppointmentsViewController.h */,
 				B99B846419EEF8F700239545 /* TSMRefillAppointmentsViewController.m */,
 				B99B846619EEF8FF00239545 /* TSMOtherAppointmentsViewController.h */,
@@ -524,21 +547,21 @@
 				B9813B0519F22D0E002BCDE3 /* TSMNote.m in Sources */,
 				B9813B0119F22D0E002BCDE3 /* TSMGeneral.m in Sources */,
 				B9813B0719F22D0E002BCDE3 /* TSMPrescription.m in Sources */,
+				412AE08719F45F8C00A60F6D /* TSMAddMedication.m in Sources */,
 				B9813B0419F22D0E002BCDE3 /* TSMMedication.m in Sources */,
-				B919937819F0309800296C9B /* TSMPresctriptionsListingTableViewController.m in Sources */,
 				B99B845919EEF8B700239545 /* TSMAllAppointmentsViewController.m in Sources */,
 				B9813AFB19F22D0E002BCDE3 /* TSMBMI.m in Sources */,
+				412AE08419F459B900A60F6D /* TSMAddDirective.m in Sources */,
 				B9C4290A19F01DC500420D08 /* TSMAddContactViewController.m in Sources */,
 				B9498DA219ECD0D200D3B1FE /* TSMTestsViewController.m in Sources */,
 				B9498D9B19ECB94D00D3B1FE /* TSMProfileMenuViewController.m in Sources */,
 				B9813AF919F22D0E002BCDE3 /* TSMAppointment.m in Sources */,
+				41AA677319F4B378007298FC /* TSMListMedications.m in Sources */,
 				B9909EBE19EC44D600E8DB3A /* TSMViewController.m in Sources */,
 				B9813B0B19F22D0E002BCDE3 /* TSMVaccination.m in Sources */,
-				B9C4290D19F02E2100420D08 /* TSMPrescriptionsTableViewCell.m in Sources */,
 				B99B846519EEF8F700239545 /* TSMRefillAppointmentsViewController.m in Sources */,
 				B9813B0919F22D0E002BCDE3 /* TSMReminder.m in Sources */,
 				B99B846819EEF8FF00239545 /* TSMOtherAppointmentsViewController.m in Sources */,
-				B9C4291019F02F2800420D08 /* TSMPrescriptionsListViewController.m in Sources */,
 				B9813AFE19F22D0E002BCDE3 /* TSMCustomData.m in Sources */,
 				B9A48B1E19EF6CA600C0BC05 /* TSMPrescriptionsTabBarViewController.m in Sources */,
 				B99B846219EEF8EC00239545 /* TSMTestsAppointmentsViewController.m in Sources */,
@@ -547,9 +570,12 @@
 				B99B845C19EEF8C600239545 /* TSMDoctorAppointmentsViewController.m in Sources */,
 				B9813B0619F22D0E002BCDE3 /* TSMNotification.m in Sources */,
 				B9DD342F19ECD94E0008F951 /* TSMTestsPageViewController.m in Sources */,
+				41AA677619F4BA56007298FC /* TSMListDirectives.m in Sources */,
 				B9813B0319F22D0E002BCDE3 /* TSMLog.m in Sources */,
 				B9DEDF1119EEFA1600C7077D /* TSMAppointmentsTabBarViewController.m in Sources */,
+				4198D7D919F440CF00374E32 /* TSMAddAllergy.m in Sources */,
 				B9470E1819EF77E500E7C3AB /* TSMEmergencyTabBarViewController.m in Sources */,
+				41AA677919F4BD49007298FC /* TSMPrescriptionsList.m in Sources */,
 				B9813AFD19F22D0E002BCDE3 /* TSMContact.m in Sources */,
 				B9813B0819F22D0E002BCDE3 /* TSMProfile.m in Sources */,
 				B9909EE019EC490100E8DB3A /* TSMNewUserViewController.m in Sources */,

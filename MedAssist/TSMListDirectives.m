@@ -1,29 +1,24 @@
 //
-//  TSMPrescriptionsTabBarViewController.m
+//  TSMListDirectives.m
 //  MedAssist
 //
-//  Created by Ariana Williams on 2014-10-15.
+//  Created by Jas on 2014-10-19.
 //  Copyright (c) 2014 Team Salveo. All rights reserved.
 //
 
-#import "TSMPrescriptionsTabBarViewController.h"
+#import "TSMListDirectives.h"
 
-@interface TSMPrescriptionsTabBarViewController ()
+@interface TSMListDirectives ()
 
 @end
 
-@implementation TSMPrescriptionsTabBarViewController
-
-- (IBAction)unwindToPrescriptions:(UIStoryboardSegue *)segue;
-{
-    
-}
+@implementation TSMListDirectives
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // move this to create user
+        // Custom initialization
     }
     return self;
 }
