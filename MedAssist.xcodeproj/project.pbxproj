@@ -11,6 +11,12 @@
 		4198D7D519F2373B00374E32 /* TSMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4198D7D419F2373B00374E32 /* TSMDBManager.m */; };
 		B911643619ECAF3C00CA5DEE /* TSMHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B911643519ECAF3C00CA5DEE /* TSMHomePageViewController.m */; };
 		B919937819F0309800296C9B /* TSMPresctriptionsListingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B919937719F0309800296C9B /* TSMPresctriptionsListingTableViewController.m */; };
+		B938EDEF19F742CE00708CDE /* Profile_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = B938EDE919F742CE00708CDE /* Profile_BG.png */; };
+		B938EDF019F742CE00708CDE /* Prescriprion_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = B938EDEA19F742CE00708CDE /* Prescriprion_BG.png */; };
+		B938EDF119F742CE00708CDE /* Medication_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = B938EDEB19F742CE00708CDE /* Medication_BG.png */; };
+		B938EDF219F742CE00708CDE /* Logs_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = B938EDEC19F742CE00708CDE /* Logs_BG.png */; };
+		B938EDF319F742CE00708CDE /* Home_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = B938EDED19F742CE00708CDE /* Home_BG.png */; };
+		B938EDF419F742CE00708CDE /* Emergency_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = B938EDEE19F742CE00708CDE /* Emergency_BG.png */; };
 		B946D0B919EE03300054D85F /* TSMLogsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B946D0B819EE03300054D85F /* TSMLogsTabBarViewController.m */; };
 		B9470E1819EF77E500E7C3AB /* TSMEmergencyTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9470E1719EF77E500E7C3AB /* TSMEmergencyTabBarViewController.m */; };
 		B9498D9B19ECB94D00D3B1FE /* TSMProfileMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9498D9A19ECB94D00D3B1FE /* TSMProfileMenuViewController.m */; };
@@ -90,6 +96,12 @@
 		B911643519ECAF3C00CA5DEE /* TSMHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMHomePageViewController.m; sourceTree = "<group>"; };
 		B919937619F0309800296C9B /* TSMPresctriptionsListingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMPresctriptionsListingTableViewController.h; sourceTree = "<group>"; };
 		B919937719F0309800296C9B /* TSMPresctriptionsListingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMPresctriptionsListingTableViewController.m; sourceTree = "<group>"; };
+		B938EDE919F742CE00708CDE /* Profile_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Profile_BG.png; path = Images/Profile_BG.png; sourceTree = "<group>"; };
+		B938EDEA19F742CE00708CDE /* Prescriprion_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Prescriprion_BG.png; path = Images/Prescriprion_BG.png; sourceTree = "<group>"; };
+		B938EDEB19F742CE00708CDE /* Medication_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Medication_BG.png; path = Images/Medication_BG.png; sourceTree = "<group>"; };
+		B938EDEC19F742CE00708CDE /* Logs_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logs_BG.png; path = Images/Logs_BG.png; sourceTree = "<group>"; };
+		B938EDED19F742CE00708CDE /* Home_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Home_BG.png; path = Images/Home_BG.png; sourceTree = "<group>"; };
+		B938EDEE19F742CE00708CDE /* Emergency_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Emergency_BG.png; path = Images/Emergency_BG.png; sourceTree = "<group>"; };
 		B946D0B719EE03300054D85F /* TSMLogsTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMLogsTabBarViewController.h; sourceTree = "<group>"; };
 		B946D0B819EE03300054D85F /* TSMLogsTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMLogsTabBarViewController.m; sourceTree = "<group>"; };
 		B9470E1619EF77E500E7C3AB /* TSMEmergencyTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMEmergencyTabBarViewController.h; sourceTree = "<group>"; };
@@ -404,6 +416,12 @@
 		B9909EE119EC537C00E8DB3A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B938EDE919F742CE00708CDE /* Profile_BG.png */,
+				B938EDEA19F742CE00708CDE /* Prescriprion_BG.png */,
+				B938EDEB19F742CE00708CDE /* Medication_BG.png */,
+				B938EDEC19F742CE00708CDE /* Logs_BG.png */,
+				B938EDED19F742CE00708CDE /* Home_BG.png */,
+				B938EDEE19F742CE00708CDE /* Emergency_BG.png */,
 				B960981819F05CA500C5BFBA /* dull-blue-circle.png */,
 				B960981A19F05CBF00C5BFBA /* 1413159095_300__MA_Icon_transbg.png */,
 			);
@@ -489,8 +507,14 @@
 			files = (
 				B960981B19F05CBF00C5BFBA /* 1413159095_300__MA_Icon_transbg.png in Resources */,
 				B9909EC019EC44D600E8DB3A /* Images.xcassets in Resources */,
+				B938EDF019F742CE00708CDE /* Prescriprion_BG.png in Resources */,
+				B938EDF219F742CE00708CDE /* Logs_BG.png in Resources */,
 				B9909EB219EC44D600E8DB3A /* InfoPlist.strings in Resources */,
+				B938EDEF19F742CE00708CDE /* Profile_BG.png in Resources */,
 				B9909EBB19EC44D600E8DB3A /* Main.storyboard in Resources */,
+				B938EDF119F742CE00708CDE /* Medication_BG.png in Resources */,
+				B938EDF419F742CE00708CDE /* Emergency_BG.png in Resources */,
+				B938EDF319F742CE00708CDE /* Home_BG.png in Resources */,
 				B960981919F05CA500C5BFBA /* dull-blue-circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
