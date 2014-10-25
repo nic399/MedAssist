@@ -47,12 +47,12 @@ static sqlite3_stmt *statement = nil;
             
             //Notes Table
             const char *notesTable_sql_stmt =
-            "create table if not exists notes (noteId integer PRIMARY KEY, noteName text, createdTime datetime, lastModified datetime, content text, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            "create table if not exists notes (noteId integer PRIMARY KEY, noteName text, createdTime datetime, lastModified datetime, noteContent text, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:notesTable_sql_stmt errMsg:errorMsg];
             
             //Measurements Table
             const char *measurementsTable_sql_stmt =
-            "create table if not exists measurements (measurementId integer PRIMARY KEY, measurementName text, date day, time datetime, value float, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            "create table if not exists measurements (measurementId integer PRIMARY KEY, measurementType text, measurementTime datetime, measurementValue float, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:measurementsTable_sql_stmt errMsg:errorMsg];
             
             //Appointments Table
@@ -67,14 +67,17 @@ static sqlite3_stmt *statement = nil;
             
             //Allergies Table
             const char  *allergiesTable_sql_stmt =
-            "create table if not exists allergies (allergyId integer PRIMARY KEY, allergyName text,userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            "create table if not exists allergies (allergyId integer PRIMARY KEY, allergyName text, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:allergiesTable_sql_stmt errMsg:errorMsg];
             
             //Vaccinations Table
             const char  *vaccinationsTable_sql_stmt =
-            "create table if not exists vaccinations (vaccinationId integer PRIMARY KEY, vaccinationName text, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            "create table if not exists vaccinations (vaccinationId integer PRIMARY KEY, vaccinationName text, vaccinationTime datetime, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:vaccinationsTable_sql_stmt errMsg:errorMsg];
-  
+            
+            //Contacts Table
+            const char *contactsTable_sql_stmt = "create table if not exists contacts (contactId integer PRIMARY KEY, contactName text, contactAddress text, contactType text, contactNumber integer, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            isSuccess=[self createTableHelper:contactsTable_sql_stmt errMsg:errorMsg];
         }
         else {
             isSuccess = NO;
@@ -115,6 +118,89 @@ static sqlite3_stmt *statement = nil;
                                 //sqlite3_reset(statement);
     }
                                 return NO;
+    
+}
+
+- (BOOL) saveContact:(NSString *)contactName contactId:(int64_t)contactId contactAddress:(NSString*)contactAddress contactType:(NSString*)contactType contactNumber:(int64_t)contactNumber userId:(int64_t)userId;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into contacts (contactId,contactName,contactAddress,contactType,contactNumber,userId) values (\"%lld\",\"%@\",\"%@\",\"%@\",\"%lld\",\"%lld\")",contactId,contactName,contactAddress,contactType,contactNumber,userId];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        //sqlite3_reset(statement);
+    }
+    return NO;
+    
+}
+
+- (BOOL) saveMeasurement:(NSString *)measurementType measurementId:(int64_t)measurementId measurementTime:(NSString *)measurementTime measurementValue:(float)measurementValue userId:(int64_t)userId;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into contacts (measurementId,measurementType,measurementTime,measurementValue,userId) values (\"%lld\",\"%@\",\"%@\",\"%f\",\"%lld\")",measurementId,measurementType,measurementTime,measurementValue,userId];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        //sqlite3_reset(statement);
+    }
+    return NO;
+
+}
+
+- (BOOL) saveNote:(NSString *)noteName noteId:(int64_t)noteId createdTime:(NSString *)createdTime lastModified:(NSString *)lastModified noteContent:(NSString *)noteContent userId:(int64_t)userId;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into notes (noteId,noteName,createdTime,lastModified,noteContent,userId) values (\"%lld\",\"%@\",\"%@\",\"%@\",\"%@\",\"%lld\")",noteId,noteName,createdTime,lastModified,noteContent,userId];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        //sqlite3_reset(statement);
+    }
+    return NO;
+}
+
+- (BOOL) saveVaccination:(NSString *)vaccinationName vaccinationId:(int64_t)vaccinationId vaccinationTime:(NSString*)vaccinationTime userId:(int64_t)userId;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into vaccinations (vaccinationId,vaccinationName,vaccinationTime,userId) values (\"%lld\",\"%@\",\"%@\",\"%lld\")",vaccinationId,vaccinationName,vaccinationTime,userId];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        //sqlite3_reset(statement);
+    }
+    return NO;
     
 }
 
@@ -169,6 +255,10 @@ static sqlite3_stmt *statement = nil;
                 NSString *getMeasurementsQuerySQL = [NSString stringWithFormat:
                                       @"select * from measurements where userId=\"%lld\"",userId];
                 NSArray* getMeasurements=[self getResult:getMeasurementsQuerySQL ];
+                
+                NSString* getContactsQuerySQL = [NSString stringWithFormat:
+                                      @"select * from contacts where userId=\"%lld\"",userId];
+                NSArray* getContacts=[self getResult:getContactsQuerySQL ];
                 
             }
             return nil;
