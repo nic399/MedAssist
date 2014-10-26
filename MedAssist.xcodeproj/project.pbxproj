@@ -100,6 +100,7 @@
 		B9CD43A319F993E300EB9CB7 /* scale.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CD43A019F993E300EB9CB7 /* scale.png */; };
 		B9CD43A619F9949500EB9CB7 /* paper-message.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CD43A419F9949500EB9CB7 /* paper-message.png */; };
 		B9CD43A719F9949500EB9CB7 /* stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CD43A519F9949500EB9CB7 /* stopwatch.png */; };
+		B9DA1B9C19FD772200E6DAB7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DA1B9B19FD772200E6DAB7 /* MessageUI.framework */; };
 		B9DD342F19ECD94E0008F951 /* TSMTestsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DD342E19ECD94E0008F951 /* TSMTestsPageViewController.m */; };
 		B9DEDF1119EEFA1600C7077D /* TSMAppointmentsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DEDF1019EEFA1600C7077D /* TSMAppointmentsTabBarViewController.m */; };
 /* End PBXBuildFile section */
@@ -257,6 +258,7 @@
 		B9CD43A019F993E300EB9CB7 /* scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale.png; path = Images/scale.png; sourceTree = "<group>"; };
 		B9CD43A419F9949500EB9CB7 /* paper-message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paper-message.png"; path = "Images/paper-message.png"; sourceTree = "<group>"; };
 		B9CD43A519F9949500EB9CB7 /* stopwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stopwatch.png; path = Images/stopwatch.png; sourceTree = "<group>"; };
+		B9DA1B9B19FD772200E6DAB7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B9DD342D19ECD94E0008F951 /* TSMTestsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMTestsPageViewController.h; sourceTree = "<group>"; };
 		B9DD342E19ECD94E0008F951 /* TSMTestsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMTestsPageViewController.m; sourceTree = "<group>"; };
 		B9DEDF0F19EEFA1600C7077D /* TSMAppointmentsTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMAppointmentsTabBarViewController.h; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9DA1B9C19FD772200E6DAB7 /* MessageUI.framework in Frameworks */,
 				4198D7D219F234ED00374E32 /* libsqlite3.0.dylib in Frameworks */,
 				B9C4290719F019AC00420D08 /* AddressBook.framework in Frameworks */,
 				B9C4290519F019A800420D08 /* AddressBookUI.framework in Frameworks */,
@@ -365,6 +368,7 @@
 		B9909EA619EC44D600E8DB3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9DA1B9B19FD772200E6DAB7 /* MessageUI.framework */,
 				4198D7D119F234ED00374E32 /* libsqlite3.0.dylib */,
 				B9C4290619F019AC00420D08 /* AddressBook.framework */,
 				B9C4290419F019A800420D08 /* AddressBookUI.framework */,
