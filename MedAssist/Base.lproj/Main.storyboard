@@ -422,10 +422,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="4792" y="408"/>
         </scene>
-        <!--View Controller - New Medication-->
+        <!--Add Medication View Controller - New Medication-->
         <scene sceneID="goc-nF-Ndm">
             <objects>
-                <viewController id="eAa-Ob-u5p" sceneMemberID="viewController">
+                <viewController id="eAa-Ob-u5p" customClass="TSMAddMedicationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AGM-Z5-val"/>
                         <viewControllerLayoutGuide type="bottom" id="Ww3-sZ-7oE"/>
@@ -446,7 +446,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="URS-uf-JXy">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="URS-uf-JXy">
                                 <rect key="frame" x="20" y="338" width="280" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="435093642.61040699">
@@ -510,7 +510,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSN-B8-3gD">
-                                <rect key="frame" x="183" y="176" width="105" height="162"/>
+                                <rect key="frame" x="183" y="172" width="105" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add Any Special Instructions Here" translatesAutoresizingMaskIntoConstraints="NO" id="Pdq-NL-ftg">
@@ -521,29 +521,47 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-4g-GEm">
-                                <rect key="frame" x="145" y="526" width="30" height="30"/>
+                                <rect key="frame" x="79" y="526" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add">
+                                <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveInstruction:" destination="eAa-Ob-u5p" eventType="touchUpInside" id="vF9-mz-ufh"/>
                                     <segue destination="D3h-xD-tTS" kind="unwind" unwindAction="unwindToPrescriptions:" id="j2D-1E-Y0s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6S4-PH-ewa">
+                                <rect key="frame" x="183" y="526" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9Jb-9M-McJ" kind="push" id="bAY-Fz-2oL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Medication" id="Jv6-L6-jFB"/>
+                    <connections>
+                        <outlet property="frequencyPicker" destination="TSN-B8-3gD" id="EsO-cs-eNm"/>
+                        <outlet property="instructionsTextField" destination="Pdq-NL-ftg" id="M97-kE-0WI"/>
+                        <outlet property="medicationNameTextField" destination="IrP-0K-t9J" id="O8B-Zr-KPB"/>
+                        <outlet property="purposeTextField" destination="d23-BD-kSM" id="pDV-dm-dOG"/>
+                        <outlet property="timePicker" destination="URS-uf-JXy" id="KFb-1r-ZS5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNO-ho-6dA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="D3h-xD-tTS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5632" y="1178"/>
         </scene>
-        <!--View Controller - New Instruction-->
+        <!--Add Directive View Controller - New Directive-->
         <scene sceneID="0hB-Pg-ct5">
             <objects>
-                <viewController id="r57-R0-PW8" sceneMemberID="viewController">
+                <viewController id="r57-R0-PW8" customClass="TSMAddDirectiveViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pVU-On-6in"/>
                         <viewControllerLayoutGuide type="bottom" id="ACx-Fh-Kks"/>
@@ -558,7 +576,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dhI-bH-1Ma">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="dhI-bH-1Ma">
                                 <rect key="frame" x="20" y="333" width="280" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="435094544.17445499">
@@ -587,7 +605,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </timeZone>
                             </datePicker>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a22-pw-3in">
-                                <rect key="frame" x="195" y="171" width="105" height="162"/>
+                                <rect key="frame" x="195" y="175" width="105" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add any instructions here" translatesAutoresizingMaskIntoConstraints="NO" id="SUv-B1-DF9">
@@ -628,22 +646,38 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yI2-cf-Ang">
-                                <rect key="frame" x="145" y="526" width="30" height="30"/>
+                                <rect key="frame" x="80" y="523" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add">
+                                <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zkU-ha-FCN" kind="unwind" unwindAction="unwindToPrescriptions:" id="qmO-CS-6me"/>
+                                    <action selector="saveDirective:" destination="r57-R0-PW8" eventType="touchUpInside" id="g9F-iu-aRS"/>
+                                    <segue destination="rHC-mK-3Jd" kind="push" id="gOv-Ud-3im"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJI-nb-oyr">
+                                <rect key="frame" x="195" y="523" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rHC-mK-3Jd" kind="push" id="ztg-ci-U25"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Instruction" id="A3v-cm-KME"/>
+                    <navigationItem key="navigationItem" title="New Directive" id="A3v-cm-KME"/>
+                    <connections>
+                        <outlet property="directiveNameTextField" destination="VQO-tN-wi7" id="vhI-Pj-PPv"/>
+                        <outlet property="frequencyPicker" destination="a22-pw-3in" id="N7K-W2-UDl"/>
+                        <outlet property="instructionsTextField" destination="SUv-B1-DF9" id="gko-78-PlI"/>
+                        <outlet property="timePicker" destination="dhI-bH-1Ma" id="S5A-Xg-ubb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxX-nI-tQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="zkU-ha-FCN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6056" y="1178"/>
         </scene>
@@ -973,10 +1007,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="6893" y="1908"/>
         </scene>
-        <!--View Controller - New Allergy-->
+        <!--Add Allergy View Controller - New Allergy-->
         <scene sceneID="I58-az-4Nv">
             <objects>
-                <viewController id="8i4-0O-8LM" sceneMemberID="viewController">
+                <viewController id="8i4-0O-8LM" customClass="TSMAddAllergyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lsx-ZX-8Tr"/>
                         <viewControllerLayoutGuide type="bottom" id="pmA-TL-8Jc"/>
@@ -986,7 +1020,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faJ-Kv-TgH">
-                                <rect key="frame" x="20" y="162" width="280" height="30"/>
+                                <rect key="frame" x="20" y="160" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1022,19 +1056,35 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-SO-zum">
-                                <rect key="frame" x="145" y="524" width="30" height="30"/>
+                                <rect key="frame" x="69" y="526" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add">
+                                <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveAllergy:" destination="8i4-0O-8LM" eventType="touchUpInside" id="6fJ-S3-tmh"/>
                                     <segue destination="Zyy-fQ-SeG" kind="unwind" unwindAction="unwindToPrescriptions:" id="gMj-Tu-aJ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXW-1k-TtL">
+                                <rect key="frame" x="207" y="526" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9Jb-9M-McJ" kind="push" id="uaq-TM-qb7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Allergy" id="1za-3E-UXE"/>
+                    <connections>
+                        <outlet property="allergyNameTextField" destination="faJ-Kv-TgH" id="nIs-DB-fUH"/>
+                        <outlet property="effectsTextField" destination="SOh-IP-4N1" id="eji-ki-Io4"/>
+                        <outlet property="severityTextField" destination="WTc-QX-3Oe" id="INR-Bj-zTn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fd3-gi-YeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Zyy-fQ-SeG" userLabel="Exit" sceneMemberID="exit"/>
@@ -1549,7 +1599,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Allergies and Medications-->
         <scene sceneID="ktS-PP-hgi">
             <objects>
-                <viewController id="9Jb-9M-McJ" userLabel="Allergies and Medications" sceneMemberID="viewController">
+                <viewController id="9Jb-9M-McJ" userLabel="Allergies and Medications" customClass="TSMListMedicationsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2hp-T7-0cZ"/>
                         <viewControllerLayoutGuide type="bottom" id="csA-3W-qri"/>
@@ -1577,7 +1627,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eAa-Ob-u5p" kind="push" id="Gw8-g9-qdL"/>
+                                    <segue destination="eAa-Ob-u5p" kind="push" id="LNO-7S-I2t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33f-y7-8mS">
@@ -1587,7 +1637,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8i4-0O-8LM" kind="push" id="USs-cx-vYI"/>
+                                    <segue destination="8i4-0O-8LM" kind="push" id="tKu-vy-NOy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1595,6 +1645,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <tabBarItem key="tabBarItem" title="Daily" image="dull-blue-circle.png" id="HNb-2g-PIq" userLabel="Daily"/>
                     <navigationItem key="navigationItem" id="rNa-pl-hLt"/>
+                    <connections>
+                        <outlet property="listOfAllergies" destination="T7Y-Ix-ZvM" id="3QT-0f-WoA"/>
+                        <outlet property="listOfMedications" destination="dlF-qc-ZV9" id="6eN-Uz-vlB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvf-CR-okQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1603,7 +1657,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Directives-->
         <scene sceneID="0hJ-72-NSO">
             <objects>
-                <viewController id="rHC-mK-3Jd" userLabel="Directives" sceneMemberID="viewController">
+                <viewController id="rHC-mK-3Jd" userLabel="Directives" customClass="TSMListDirectivesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yY2-S2-rI3"/>
                         <viewControllerLayoutGuide type="bottom" id="CYC-yj-vi3"/>
@@ -1620,11 +1674,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaT-7Z-4vM">
                                 <rect key="frame" x="20" y="488" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Instruction">
+                                <state key="normal" title="Add Directive">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="r57-R0-PW8" kind="push" id="RjU-H4-feQ"/>
+                                    <segue destination="r57-R0-PW8" kind="push" id="Shb-ab-5r9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1632,10 +1686,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <tabBarItem key="tabBarItem" title="Other" image="dull-blue-circle.png" id="dgV-rc-mF7"/>
                     <navigationItem key="navigationItem" id="WQE-Mo-Qev"/>
+                    <connections>
+                        <outlet property="listOfDirectives" destination="tdF-fm-veR" id="KjA-h9-KzZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2UE-yw-WeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4376" y="1170"/>
+            <point key="canvasLocation" x="4368" y="1170"/>
         </scene>
         <!--Create New User Page 1-->
         <scene sceneID="714-xS-2qV">
@@ -1871,7 +1928,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="q1e-aJ-8Ya"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="znK-OG-5k1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1890,7 +1947,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="nuH-L1-aTl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="r1i-c7-nHr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Appointments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp7-eZ-IYf">
@@ -1965,7 +2022,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <viewControllerLayoutGuide type="bottom" id="BFu-B5-lvR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZnE-XD-fDd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRO-cw-inj">
@@ -2332,7 +2389,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="6aR-Da-d8I"/>
-        <segue reference="8GP-4Z-nAn"/>
-        <segue reference="MS2-zC-Od6"/>
+        <segue reference="qzu-Uy-yMx"/>
+        <segue reference="xnZ-og-RUe"/>
+        <segue reference="bAY-Fz-2oL"/>
+        <segue reference="gOv-Ud-3im"/>
     </inferredMetricsTieBreakers>
 </document>
