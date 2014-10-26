@@ -74,6 +74,10 @@ static sqlite3_stmt *statement = nil;
             const char  *vaccinationsTable_sql_stmt =
             "create table if not exists vaccinations (vaccinationId integer PRIMARY KEY, vaccinationName text, vaccinationTime datetime, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:vaccinationsTable_sql_stmt errMsg:errorMsg];
+            
+            //Contacts Table
+            const char *contactsTable_sql_stmt = "create table if not exists contacts (contactId integer PRIMARY KEY, contactName text, contactAddress text, contactType text, contactNumber integer, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            isSuccess=[self createTableHelper:contactsTable_sql_stmt errMsg:errorMsg];
         }
         else {
             isSuccess = NO;
