@@ -12,7 +12,7 @@
 @interface TSMDirective : TSMPrescription
 
 @property NSString * name;
-@property NSDate * time;
+@property time_t time;
 @property NSString * specialInstructions;
 @property NSString * frequency;
 @property time_t endDate;
