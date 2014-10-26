@@ -6,13 +6,9 @@
 //  Copyright (c) 2014 Team Salveo. All rights reserved.
 //
 
-#import "TSMListMedications.h"
+#import "TSMListMedicationsViewController.h"
 
-@interface TSMListMedications ()
-
-@end
-
-@implementation TSMListMedications
+@implementation TSMListMedicationsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

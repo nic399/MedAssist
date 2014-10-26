@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TSMListDirectives : UIViewController
+@interface TSMListDirectivesViewController :UIViewController //<UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *listOfDirectives;
-
+@property NSMutableArray *directivesArray;
+-(void) displayDirectives;
 @end

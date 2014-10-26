@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TSMListMedications : UIViewController
+@interface TSMListMedicationsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *listOfMedications;
 @property (weak, nonatomic) IBOutlet UITableView *listOfAllergies;
 

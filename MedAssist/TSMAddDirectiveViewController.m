@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Team Salveo. All rights reserved.
 //
 
-#import "TSMAddDirective.h"
-#import "TSMDBManager.h"
+#import "TSMAddDirectiveViewController.h"
+#import "TSMAppDelegate.h"
 
-@implementation TSMAddDirective
+@implementation TSMAddDirectiveViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)
 nibBundleOrNil
@@ -18,7 +18,11 @@ nibBundleOrNil
     
     return self;
 }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 - (void)datePickerChanged:(UIDatePicker *)datePicker
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -31,12 +35,14 @@ nibBundleOrNil
 {
     [super viewDidLoad];
     if (self) {
-        self.frequencyArray  = [[NSArray alloc]         initWithObjects:@"Hourly",@"Daily",@"Weekly",@"Bi-weekly",@"Monthly",@"Yearly" , nil];
+        self.frequencyArray  = [[NSArray alloc]initWithObjects:@"Hourly",@"Daily",@"Weekly",@"Bi-weekly",@"Monthly",@"Yearly" , nil];
     }
     
     self.frequencyPicker.dataSource=self;
     self.frequencyPicker.delegate=self;
     [self->timePicker addTarget:self action:@selector(datePickerChanged:) forControlEvents:UIControlEventValueChanged];
+    self->directiveNameTextField.delegate = self;
+    self->instructionsTextField.delegate=self;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -47,11 +53,12 @@ nibBundleOrNil
 }
 
 -(IBAction)saveDirective:(id)sender{
-    BOOL success = NO;
+    BOOL success = YES;
     NSString *alertString = @"Data Insertion failed";
     if (directiveNameTextField.text.length>0 && instructionsTextField.text.length>0)
     {
-        success = [[TSMDBManager getSharedInstance] saveDirective:directiveNameTextField.text instructions:instructionsTextField.text frequency:self.frequency date: self.startDate];
+        TSMAppDelegate *appDelegate = (TSMAppDelegate *)[[UIApplication sharedApplication] delegate];
+        success= [appDelegate saveDirective:directiveNameTextField.text instructions:instructionsTextField.text frequency:self.frequency date: self.startDate];
     }
     
     else{
@@ -60,7 +67,7 @@ nibBundleOrNil
     if (success == NO) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:
                               alertString message:nil
-                                                      delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
 }

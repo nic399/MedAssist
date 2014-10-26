@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TSMAddDirective : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+@interface TSMAddDirectiveViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 {
-    __weak IBOutlet UITextField *directiveNameTextField;
     __weak IBOutlet UITextView *instructionsTextField;
+    __weak IBOutlet UITextField *directiveNameTextField;
 
     __weak IBOutlet UIDatePicker *timePicker;
 }

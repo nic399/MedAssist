@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Team Salveo. All rights reserved.
 //
 
-#import "TSMAddAllergy.h"
-#import "TSMDBManager.h"
+#import "TSMAddAllergyViewController.h"
+#import "TSMAppDelegate.h"
 
-@implementation TSMAddAllergy
+@implementation TSMAddAllergyViewController
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)
 nibBundleOrNil
 {
@@ -19,10 +19,15 @@ nibBundleOrNil
     }
     return self;
 }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self->allergyNameTextField.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
 

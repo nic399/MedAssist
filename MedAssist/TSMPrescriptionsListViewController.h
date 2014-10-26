@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TSMPrescriptionsList : UIViewController
+@interface TSMPrescriptionsListViewController : UIViewController
 
 @end

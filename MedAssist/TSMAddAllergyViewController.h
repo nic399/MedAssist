@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "TSMDBManager.h"
 
-@interface TSMAddAllergy : UIViewController<UITextFieldDelegate>
+@interface TSMAddAllergyViewController : UIViewController<UITextFieldDelegate>
 {
     IBOutlet UITextField *allergyNameTextField;
     IBOutlet UITextField *severityTextField;

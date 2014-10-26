@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TSMAddMedication : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+@interface TSMAddMedicationViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
 {
     __weak IBOutlet UITextField *medicationNameTextField;

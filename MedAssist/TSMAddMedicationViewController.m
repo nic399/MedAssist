@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Team Salveo. All rights reserved.
 //
 
-#import "TSMAddMedication.h"
-#import "TSMDBManager.h"
+#import "TSMAddMedicationViewController.h"
+#import "TSMAppDelegate.h"
 
-@implementation TSMAddMedication
+@implementation TSMAddMedicationViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)
 nibBundleOrNil
@@ -37,9 +37,15 @@ nibBundleOrNil
     self.frequencyPicker.dataSource=self;
     self.frequencyPicker.delegate=self;
     [self->timePicker addTarget:self action:@selector(datePickerChanged:) forControlEvents:UIControlEventValueChanged];
+    self->medicationNameTextField.delegate = self;
+    self->instructionsTextField.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
-
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -52,7 +58,8 @@ nibBundleOrNil
     NSString *alertString = @"Data Insertion failed";
     if (medicationNameTextField.text.length>0 && purposeTextField.text.length>0 && instructionsTextField.text.length>0)
     {
-        success = [[TSMDBManager getSharedInstance] saveMedication:medicationNameTextField.text purpose:purposeTextField.text instructions:instructionsTextField.text frequency:self.frequency date:self.startDate];
+        TSMAppDelegate *appDelegate = (TSMAppDelegate *)[[UIApplication sharedApplication] delegate];
+        success= [appDelegate saveMedication:medicationNameTextField.text purpose:purposeTextField.text instructions:instructionsTextField.text frequency:self.frequency date:self.startDate];
     }
     
     else{

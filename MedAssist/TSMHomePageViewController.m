@@ -7,6 +7,7 @@
 //
 
 #import "TSMHomePageViewController.h"
+#import "TSMDBManager.h"
 
 @interface TSMHomePageViewController ()
 
@@ -31,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     // Do any additional setup after loading the view.
 }
 
