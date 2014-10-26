@@ -47,12 +47,12 @@ static sqlite3_stmt *statement = nil;
             
             //Notes Table
             const char *notesTable_sql_stmt =
-            "create table if not exists notes (noteId integer PRIMARY KEY, noteName text, createdTime datetime, lastModified datetime, content text, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            "create table if not exists notes (noteId integer PRIMARY KEY, noteName text, createdTime datetime, lastModified datetime, noteContent text, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:notesTable_sql_stmt errMsg:errorMsg];
             
             //Measurements Table
             const char *measurementsTable_sql_stmt =
-            "create table if not exists measurements (measurementId integer PRIMARY KEY, measurementName text, date day, time datetime, value float, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            "create table if not exists measurements (measurementId integer PRIMARY KEY, measurementType text, measurementTime datetime, measurementValue float, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:measurementsTable_sql_stmt errMsg:errorMsg];
             
             //Appointments Table
@@ -67,14 +67,13 @@ static sqlite3_stmt *statement = nil;
             
             //Allergies Table
             const char  *allergiesTable_sql_stmt =
-            "create table if not exists allergies (allergyId integer PRIMARY KEY, allergyName text,userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            "create table if not exists allergies (allergyId integer PRIMARY KEY, allergyName text, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:allergiesTable_sql_stmt errMsg:errorMsg];
             
             //Vaccinations Table
             const char  *vaccinationsTable_sql_stmt =
-            "create table if not exists vaccinations (vaccinationId integer PRIMARY KEY, vaccinationName text, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
+            "create table if not exists vaccinations (vaccinationId integer PRIMARY KEY, vaccinationName text, vaccinationTime datetime, userId integer, FOREIGN KEY userId REFERENCES user(userId))";
             isSuccess=[self createTableHelper:vaccinationsTable_sql_stmt errMsg:errorMsg];
-  
         }
         else {
             isSuccess = NO;
