@@ -1,13 +1,15 @@
 //
-//  TSMPrescriptionsList.h
+//  TSMPrescriptionsListViewController.h
 //  MedAssist
 //
-//  Created by Jas on 2014-10-19.
+//  Created by Ariana Williams on 2014-10-16.
 //  Copyright (c) 2014 Team Salveo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface TSMPrescriptionsListViewController : UIViewController
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

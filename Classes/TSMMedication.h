@@ -15,7 +15,8 @@
 @property NSString * purpose;
 @property NSString * specialInstructions;
 @property NSString * frequency;
-@property NSDate * time;
+@property NSMutableArray * times;
+@property time_t endDate;
 @property int photo;
 
 @end
