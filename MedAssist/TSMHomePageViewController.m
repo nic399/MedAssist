@@ -7,6 +7,7 @@
 //
 
 #import "TSMHomePageViewController.h"
+#import "TSMDBManager.h"
 
 @interface TSMHomePageViewController ()
 
@@ -17,10 +18,6 @@
 - (IBAction)unwindToHome:(UIStoryboardSegue *)unwindSegue
 {
 
-}
-
-- (IBAction)callEmergency:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:----------"]];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     // Do any additional setup after loading the view.
 }
 

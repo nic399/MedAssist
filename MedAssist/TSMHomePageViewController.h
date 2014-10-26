@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TSMMenuItemViewController.h"
-
+#import "TSMDBManager.h"
 @interface TSMHomePageViewController : UIViewController
 
+@property TSMDBManager* dbManager;
 - (IBAction)unwindToHome:(UIStoryboardSegue *)segue;
-- (IBAction)callEmergency:(id)sender;
 
 @end
