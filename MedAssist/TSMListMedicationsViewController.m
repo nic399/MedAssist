@@ -1,28 +1,14 @@
 //
-//  TSMHomePageViewController.m
+//  TSMListMedications.m
 //  MedAssist
 //
-//  Created by Ariana Williams on 2014-10-13.
+//  Created by Jas on 2014-10-19.
 //  Copyright (c) 2014 Team Salveo. All rights reserved.
 //
 
-#import "TSMHomePageViewController.h"
-#import "TSMDBManager.h"
+#import "TSMListMedicationsViewController.h"
 
-@interface TSMHomePageViewController ()
-
-@end
-
-@implementation TSMHomePageViewController
-
-- (IBAction)unwindToHome:(UIStoryboardSegue *)unwindSegue
-{
-
-}
-
-- (IBAction)callEmergency:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:----------"]];
-}
+@implementation TSMListMedicationsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,8 +22,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
     // Do any additional setup after loading the view.
 }
 
