@@ -24,7 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     displayDirectives
+    [self displayDirectives];
 }
 
 -(void) displayDirectives
