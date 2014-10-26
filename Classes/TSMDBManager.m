@@ -121,6 +121,89 @@ static sqlite3_stmt *statement = nil;
     
 }
 
+- (BOOL) saveContact:(NSString *)contactName contactId:(int64_t)contactId contactAddress:(NSString*)contactAddress contactType:(NSString*)contactType contactNumber:(int64_t)contactNumber userId:(int64_t)userId;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into contacts (contactId,contactName,contactAddress,contactType,contactNumber,userId) values (\"%lld\",\"%@\",\"%@\",\"%@\",\"%lld\",\"%lld\")",contactId,contactName,contactAddress,contactType,contactNumber,userId];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        //sqlite3_reset(statement);
+    }
+    return NO;
+    
+}
+
+- (BOOL) saveMeasurement:(NSString *)measurementType measurementId:(int64_t)measurementId measurementTime:(NSString *)measurementTime measurementValue:(float)measurementValue userId:(int64_t)userId;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into contacts (measurementId,measurementType,measurementTime,measurementValue,userId) values (\"%lld\",\"%@\",\"%@\",\"%f\",\"%lld\")",measurementId,measurementType,measurementTime,measurementValue,userId];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        //sqlite3_reset(statement);
+    }
+    return NO;
+
+}
+
+- (BOOL) saveNote:(NSString *)noteName noteId:(int64_t)noteId createdTime:(NSString *)createdTime lastModified:(NSString *)lastModified noteContent:(NSString *)noteContent userId:(int64_t)userId;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into notes (noteId,noteName,createdTime,lastModified,noteContent,userId) values (\"%lld\",\"%@\",\"%@\",\"%@\",\"%@\",\"%lld\")",noteId,noteName,createdTime,lastModified,noteContent,userId];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        //sqlite3_reset(statement);
+    }
+    return NO;
+}
+
+- (BOOL) saveVaccination:(NSString *)vaccinationName vaccinationId:(int64_t)vaccinationId vaccinationTime:(NSString*)vaccinationTime userId:(int64_t)userId;
+{
+    const char *dbpath = [databasePath UTF8String];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into vaccinations (vaccinationId,vaccinationName,vaccinationTime,userId) values (\"%lld\",\"%@\",\"%@\",\"%lld\")",vaccinationId,vaccinationName,vaccinationTime,userId];
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            return YES;
+        }
+        else {
+            return NO;
+        }
+        //sqlite3_reset(statement);
+    }
+    return NO;
+    
+}
+
 - (NSArray*) findByUserName:(NSString*)userName;
         {
             int64_t userId=0;
@@ -172,6 +255,10 @@ static sqlite3_stmt *statement = nil;
                 NSString *getMeasurementsQuerySQL = [NSString stringWithFormat:
                                       @"select * from measurements where userId=\"%lld\"",userId];
                 NSArray* getMeasurements=[self getResult:getMeasurementsQuerySQL ];
+                
+                NSString* getContactsQuerySQL = [NSString stringWithFormat:
+                                      @"select * from contacts where userId=\"%lld\"",userId];
+                NSArray* getContacts=[self getResult:getContactsQuerySQL ];
                 
             }
             return nil;
