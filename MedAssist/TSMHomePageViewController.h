@@ -12,5 +12,6 @@
 @interface TSMHomePageViewController : UIViewController
 
 - (IBAction)unwindToHome:(UIStoryboardSegue *)segue;
+- (IBAction)callEmergency:(id)sender;
 
 @end

@@ -174,7 +174,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="dull-blue-circle.png" id="YIu-jf-bgB"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="YIu-jf-bgB"/>
                     <navigationItem key="navigationItem" title="Home" id="z1f-Wn-Q2a">
                         <barButtonItem key="leftBarButtonItem" id="kvO-QF-hdG">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="POh-1C-wY3">
@@ -184,7 +184,13 @@
                                 <state key="normal" title="Emergency">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="callEmergency:" destination="Okx-Re-yqT" eventType="touchUpInside" id="t5K-We-byI"/>
+                                </connections>
                             </button>
+                            <connections>
+                                <action selector="callEmergency:" destination="Okx-Re-yqT" id="xg9-21-UHc"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="znz-gi-elW">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y0i-xE-InE">
@@ -243,7 +249,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Other" image="dull-blue-circle.png" id="Bee-Wu-XYT"/>
+                    <tabBarItem key="tabBarItem" title="Other" image="clock.png" id="Bee-Wu-XYT"/>
                     <navigationItem key="navigationItem" title="Other" id="JwI-pQ-e6M"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHe-Lw-s8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -273,6 +279,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="addAppointment:" destination="gqE-DH-4Qz" eventType="touchUpInside" id="bBB-pk-8fa"/>
                                     <segue destination="B2U-zZ-4fc" kind="unwind" unwindAction="unwindToAppointments:" id="mz3-pE-A5r"/>
                                 </connections>
                             </button>
@@ -354,6 +361,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Appointment" id="vhO-go-FZK"/>
+                    <connections>
+                        <outlet property="appointmentDate" destination="rgW-DH-x7f" id="r44-T3-bqa"/>
+                        <outlet property="appointmentName" destination="Gf8-ly-mcI" id="MWZ-nc-cJx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aow-l5-eEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="B2U-zZ-4fc" userLabel="Exit" sceneMemberID="exit"/>
@@ -398,7 +409,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tests" image="dull-blue-circle.png" id="sOr-z5-MWS"/>
+                    <tabBarItem key="tabBarItem" title="Tests" image="scale.png" id="sOr-z5-MWS"/>
                     <navigationItem key="navigationItem" title="Tests" id="x0x-IB-64Y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1z-g8-iQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,7 +454,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Refills" image="dull-blue-circle.png" id="qt0-5Y-JR0"/>
+                    <tabBarItem key="tabBarItem" title="Refills" image="supplement.png" id="qt0-5Y-JR0"/>
                     <navigationItem key="navigationItem" title="Prescription Refill" id="dP5-Rx-J2D"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsg-gN-wTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1135,7 +1146,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Doctor" image="dull-blue-circle.png" id="wXp-7v-caK"/>
+                    <tabBarItem key="tabBarItem" title="Doctor" image="stethoscope.png" id="wXp-7v-caK"/>
                     <navigationItem key="navigationItem" title="Doctor" id="dCT-p9-ZWH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSY-3D-LJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1176,7 +1187,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Listing" image="dull-blue-circle.png" id="zkO-Xi-iXg"/>
+                    <tabBarItem key="tabBarItem" title="Measurements" image="ruler.png" id="zkO-Xi-iXg"/>
                     <navigationItem key="navigationItem" id="8mX-WZ-CKZ">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="gOL-VR-zJo"/>
@@ -1231,7 +1242,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Graphs" image="dull-blue-circle.png" id="ktg-5o-Bxl"/>
+                    <tabBarItem key="tabBarItem" title="Graphs" image="bar-chart.png" id="ktg-5o-Bxl"/>
                     <navigationItem key="navigationItem" id="z1B-i9-hsv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rao-mb-TUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1272,7 +1283,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notes" image="dull-blue-circle.png" id="VUB-8l-YH4"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="diary.png" id="VUB-8l-YH4"/>
                     <navigationItem key="navigationItem" id="QBj-qs-2DM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1t-mw-GhZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1313,7 +1324,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Vaccinations" image="dull-blue-circle.png" id="SGb-YO-XEw"/>
+                    <tabBarItem key="tabBarItem" title="Vaccinations" image="dropper.png" id="SGb-YO-XEw"/>
                     <navigationItem key="navigationItem" id="WV5-3g-GXO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDm-EO-4gE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1339,7 +1350,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Options" image="dull-blue-circle.png" id="PKx-Hb-DSp"/>
+                    <tabBarItem key="tabBarItem" title="Options" image="gear.png" id="PKx-Hb-DSp"/>
                     <navigationItem key="navigationItem" id="2wU-Z0-EnS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOR-3I-q3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1362,38 +1373,79 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sk9-jJ-RyF">
-                                <rect key="frame" x="45" y="216" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sk9-jJ-RyF">
+                                <rect key="frame" x="20" y="154" width="122" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Emergency">
+                                <state key="normal" title="Emergency" image="WX_circle_lightblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXc-Oq-euI">
-                                <rect key="frame" x="226" y="216" width="47" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXc-Oq-euI">
+                                <rect key="frame" x="178" y="154" width="122" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Doctor">
+                                <state key="normal" title="Doctor" image="WX_circle_lightblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-LK-uc7">
-                                <rect key="frame" x="68" y="391" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-LK-uc7">
+                                <rect key="frame" x="20" y="333" width="122" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Taxi">
+                                <state key="normal" title="Taxi" image="WX_circle_lightblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-rb-v9R">
-                                <rect key="frame" x="215" y="391" width="69" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x9-rb-v9R">
+                                <rect key="frame" x="178" y="334" width="122" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pharmacy">
+                                <state key="normal" title="Pharmacy" image="WX_circle_lightblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pharmacy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8Z-2U-lAz">
+                                <rect key="frame" x="200" y="398" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMR-Es-My9">
+                                <rect key="frame" x="213" y="217" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Taxi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHR-PH-X21">
+                                <rect key="frame" x="66" y="398" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emergency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDO-1V-tJ7">
+                                <rect key="frame" x="38" y="214" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aiga_taxi.png" translatesAutoresizingMaskIntoConstraints="NO" id="jw4-OK-cfJ">
+                                <rect key="frame" x="58" y="344" width="47" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Caduceus.png" translatesAutoresizingMaskIntoConstraints="NO" id="ifH-XH-Xcg">
+                                <rect key="frame" x="200" y="171" width="81" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PharmacistsMortar.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="nDO-fM-QSx">
+                                <rect key="frame" x="208" y="350" width="63" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black_Cross.png" translatesAutoresizingMaskIntoConstraints="NO" id="vB3-Ok-w80">
+                                <rect key="frame" x="56" y="167" width="51" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="dull-blue-circle.png" id="hFr-bV-pPg"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="emergency.png" id="hFr-bV-pPg"/>
                     <navigationItem key="navigationItem" id="m7a-TR-IGm">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CpQ-09-J4E">
@@ -1458,7 +1510,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Doctor" image="dull-blue-circle.png" id="BPu-n3-I3E"/>
+                    <tabBarItem key="tabBarItem" title="Doctor" image="medical-sign.png" id="BPu-n3-I3E"/>
                     <navigationItem key="navigationItem" id="Wlt-Kc-3ZM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFy-aP-mgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1504,7 +1556,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pharmacy" image="dull-blue-circle.png" id="gtv-6J-fJb"/>
+                    <tabBarItem key="tabBarItem" title="Pharmacy" image="cylinder.png" id="gtv-6J-fJb"/>
                     <navigationItem key="navigationItem" id="vIh-xe-Rfy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4L-wc-5ys" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1545,7 +1597,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Taxi" image="dull-blue-circle.png" id="ryI-B4-JSy"/>
+                    <tabBarItem key="tabBarItem" title="Taxi" image="car.png" id="ryI-B4-JSy"/>
                     <navigationItem key="navigationItem" id="hEk-vs-EtU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y1b-bm-MVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1586,7 +1638,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contacts" image="dull-blue-circle.png" id="CYH-iL-bmn"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="id-card.png" id="CYH-iL-bmn"/>
                     <navigationItem key="navigationItem" id="41A-mx-LOB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kn-QD-x0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1646,7 +1698,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Listing" image="dull-blue-circle.png" id="f8c-QI-piq"/>
+                    <tabBarItem key="tabBarItem" title="Listing" image="text-list.png" id="f8c-QI-piq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc2-pB-28j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1703,7 +1755,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Daily" image="dull-blue-circle.png" id="HNb-2g-PIq" userLabel="Daily"/>
+                    <tabBarItem key="tabBarItem" title="Daily" image="stopwatch.png" id="HNb-2g-PIq" userLabel="Daily"/>
                     <navigationItem key="navigationItem" id="rNa-pl-hLt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvf-CR-okQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1744,7 +1796,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Other" image="dull-blue-circle.png" id="dgV-rc-mF7"/>
+                    <tabBarItem key="tabBarItem" title="Other" image="paper-message.png" id="dgV-rc-mF7"/>
                     <navigationItem key="navigationItem" id="WQE-Mo-Qev"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2UE-yw-WeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2187,7 +2239,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="All" image="dull-blue-circle.png" id="rhl-Z1-VRP"/>
+                    <tabBarItem key="tabBarItem" title="All" image="calendar.png" id="rhl-Z1-VRP"/>
                     <navigationItem key="navigationItem" id="989-I2-8ra">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y7p-qE-xqC">
@@ -2279,7 +2331,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="FAQs" image="dull-blue-circle.png" id="yvB-em-kPH"/>
+                    <tabBarItem key="tabBarItem" title="FAQs" image="info.png" id="yvB-em-kPH"/>
                     <navigationItem key="navigationItem" title="FAQs" id="a8l-mV-f5S"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1KR-RY-Lwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2305,7 +2357,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact Us" image="dull-blue-circle.png" id="lRg-k6-ceI"/>
+                    <tabBarItem key="tabBarItem" title="Contact Us" image="email.png" id="lRg-k6-ceI"/>
                     <navigationItem key="navigationItem" title="Contact Us" id="N9i-6S-V5c"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XhQ-HR-yuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2475,13 +2527,38 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="1413159095_300__MA_Icon_transbg.png" width="1027" height="1027"/>
+        <image name="Black_Cross.png" width="249" height="249"/>
+        <image name="Caduceus.png" width="3029" height="3469"/>
         <image name="Emergency_BG.png" width="640" height="1136"/>
         <image name="Home_BG.png" width="640" height="1136"/>
         <image name="Logs_BG.png" width="640" height="1136"/>
         <image name="Medication_BG.png" width="640" height="1136"/>
+        <image name="PharmacistsMortar.svg.png" width="601" height="499"/>
         <image name="Prescriprion_BG.png" width="640" height="1136"/>
         <image name="Profile_BG.png" width="640" height="1136"/>
-        <image name="dull-blue-circle.png" width="16" height="16"/>
+        <image name="WX_circle_lightblue.png" width="400" height="400"/>
+        <image name="aiga_taxi.png" width="800" height="800"/>
+        <image name="bar-chart.png" width="30" height="30"/>
+        <image name="calendar.png" width="29" height="30"/>
+        <image name="car.png" width="30" height="30"/>
+        <image name="clock.png" width="29" height="30"/>
+        <image name="cylinder.png" width="30" height="30"/>
+        <image name="diary.png" width="30" height="30"/>
+        <image name="dropper.png" width="30" height="30"/>
+        <image name="email.png" width="30" height="30"/>
+        <image name="emergency.png" width="30" height="30"/>
+        <image name="gear.png" width="30" height="30"/>
+        <image name="home.png" width="30" height="30"/>
+        <image name="id-card.png" width="30" height="30"/>
+        <image name="info.png" width="30" height="30"/>
+        <image name="medical-sign.png" width="29" height="30"/>
+        <image name="paper-message.png" width="30" height="30"/>
+        <image name="ruler.png" width="29" height="30"/>
+        <image name="scale.png" width="29" height="30"/>
+        <image name="stethoscope.png" width="30" height="30"/>
+        <image name="stopwatch.png" width="29" height="30"/>
+        <image name="supplement.png" width="30" height="30"/>
+        <image name="text-list.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -2489,8 +2566,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4yS-FD-iGk"/>
-        <segue reference="8GP-4Z-nAn"/>
-        <segue reference="6aR-Da-d8I"/>
+        <segue reference="rJE-Ml-bOO"/>
+        <segue reference="A5N-q9-L3h"/>
+        <segue reference="rW4-Ya-Hrv"/>
     </inferredMetricsTieBreakers>
 </document>
