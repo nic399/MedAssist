@@ -1,14 +1,32 @@
 //
-//  TSMPrescriptionsList.m
+//  TSMPrescriptionsListViewController.m
 //  MedAssist
 //
-//  Created by Jas on 2014-10-19.
+//  Created by Ariana Williams on 2014-10-16.
 //  Copyright (c) 2014 Team Salveo. All rights reserved.
 //
 
 #import "TSMPrescriptionsListViewController.h"
+#import "TSMPrescriptionsTableViewCell.h"
+
+@interface TSMPrescriptionsListViewController ()
+
+@end
 
 @implementation TSMPrescriptionsListViewController
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // NEED METHOD TO GIVE NUMBER OF PRESCRIPTIONS IN LIST
+    long NUMBER_OF_ROWS = 10;
+    
+    TSMPrescriptionsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
+    
+    cell.firstLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
+    cell.secondLabel.text = [NSString stringWithFormat:@"%ld", NUMBER_OF_ROWS - indexPath.row];
+    
+    return cell;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
