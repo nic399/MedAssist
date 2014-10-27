@@ -1683,6 +1683,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" label="">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="firstLabel" destination="KoR-N7-OeR" id="gXC-iu-nSC"/>
                                             <outlet property="secondLabel" destination="oig-2G-v3e" id="oCR-eJ-Sja"/>

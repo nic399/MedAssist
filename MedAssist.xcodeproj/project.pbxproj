@@ -101,6 +101,7 @@
 		B9CD43A619F9949500EB9CB7 /* paper-message.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CD43A419F9949500EB9CB7 /* paper-message.png */; };
 		B9CD43A719F9949500EB9CB7 /* stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CD43A519F9949500EB9CB7 /* stopwatch.png */; };
 		B9DA1B9C19FD772200E6DAB7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DA1B9B19FD772200E6DAB7 /* MessageUI.framework */; };
+		B9DA1BA119FDE6B000E6DAB7 /* MedAssist.sql in Resources */ = {isa = PBXBuildFile; fileRef = B9DA1BA019FDE6B000E6DAB7 /* MedAssist.sql */; };
 		B9DD342F19ECD94E0008F951 /* TSMTestsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DD342E19ECD94E0008F951 /* TSMTestsPageViewController.m */; };
 		B9DEDF1119EEFA1600C7077D /* TSMAppointmentsTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DEDF1019EEFA1600C7077D /* TSMAppointmentsTabBarViewController.m */; };
 /* End PBXBuildFile section */
@@ -259,6 +260,7 @@
 		B9CD43A419F9949500EB9CB7 /* paper-message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "paper-message.png"; path = "Images/paper-message.png"; sourceTree = "<group>"; };
 		B9CD43A519F9949500EB9CB7 /* stopwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stopwatch.png; path = Images/stopwatch.png; sourceTree = "<group>"; };
 		B9DA1B9B19FD772200E6DAB7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B9DA1BA019FDE6B000E6DAB7 /* MedAssist.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = MedAssist.sql; sourceTree = "<group>"; };
 		B9DD342D19ECD94E0008F951 /* TSMTestsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMTestsPageViewController.h; sourceTree = "<group>"; };
 		B9DD342E19ECD94E0008F951 /* TSMTestsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMTestsPageViewController.m; sourceTree = "<group>"; };
 		B9DEDF0F19EEFA1600C7077D /* TSMAppointmentsTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMAppointmentsTabBarViewController.h; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 		B9909E9B19EC44D600E8DB3A = {
 			isa = PBXGroup;
 			children = (
+				B9DA1BA019FDE6B000E6DAB7 /* MedAssist.sql */,
 				B9813B0C19F22D14002BCDE3 /* Classes */,
 				B9909EE119EC537C00E8DB3A /* Images */,
 				B9909EAD19EC44D600E8DB3A /* MedAssist */,
@@ -621,6 +624,7 @@
 				B938EDF419F742CE00708CDE /* Emergency_BG.png in Resources */,
 				B9CD438119F98FC600EB9CB7 /* home.png in Resources */,
 				B9CD439219F991C100EB9CB7 /* id-card.png in Resources */,
+				B9DA1BA119FDE6B000E6DAB7 /* MedAssist.sql in Resources */,
 				B9CD43A719F9949500EB9CB7 /* stopwatch.png in Resources */,
 				B938EDF319F742CE00708CDE /* Home_BG.png in Resources */,
 				B960981919F05CA500C5BFBA /* dull-blue-circle.png in Resources */,
