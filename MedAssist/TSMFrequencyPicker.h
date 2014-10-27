@@ -1,5 +1,5 @@
 //
-//  TSMPrescriptionsList.h
+//  TSMFrequencyPicker.h
 //  MedAssist
 //
 //  Created by Jas on 2014-10-19.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TSMPrescriptionsListViewController : UIViewController
+@interface TSMFrequencyPicker : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 
 @end

@@ -14,6 +14,7 @@
 MFMailComposeViewController *mailComposer;
 }
 
+@property TSMDBManager* dbManager;
 - (IBAction)unwindToHome:(UIStoryboardSegue *)segue;
 - (IBAction)callEmergency:(id)sender;
 - (void)sendMail;

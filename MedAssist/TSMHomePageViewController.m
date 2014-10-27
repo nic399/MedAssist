@@ -21,10 +21,6 @@
 
 }
 
-- (IBAction)callEmergency:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:----------"]];
-}
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
