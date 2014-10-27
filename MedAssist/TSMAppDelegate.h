@@ -11,10 +11,10 @@
 
 @interface TSMAppDelegate : UIResponder <UIApplicationDelegate>
 {
-// Database variables
-NSString *databaseName;
-NSString *databasePath;
-
+    // Database variables
+    NSString *databaseName;
+    NSString *databasePath;
+    
 }
 
 @property int32_t userId;

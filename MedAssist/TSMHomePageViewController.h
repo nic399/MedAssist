@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "TSMMenuItemViewController.h"
-#import "TSMDBManager.h"
-@interface TSMHomePageViewController : UIViewController
+
+@interface TSMHomePageViewController : UIViewController<MFMailComposeViewControllerDelegate> {
+MFMailComposeViewController *mailComposer;
+}
 
 @property TSMDBManager* dbManager;
 - (IBAction)unwindToHome:(UIStoryboardSegue *)segue;
+- (IBAction)callEmergency:(id)sender;
+- (void)sendMail;
 
 @end

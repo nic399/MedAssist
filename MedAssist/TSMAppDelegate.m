@@ -52,13 +52,13 @@ sqlite3_stmt* statement;
     
     
     
-            
-        }
+    
+}
 
 
 - (BOOL) saveUser:(NSString *)userName userId:(int64_t)userId;
 {
-  
+    
     const char *dbpath = [databasePath UTF8String];
     if (sqlite3_open(dbpath, &database) == SQLITE_OK)
     {
@@ -273,7 +273,7 @@ sqlite3_stmt* statement;
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
