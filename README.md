@@ -1,0 +1,7 @@
+# MedAssist
+SFU - CMPT 275 Final Project - September 2014 <br><br>
+MedAssist was created in the Winter 2014 semester by a team of 5 students as a final project for CMPT 275: Software Engineering at Simon Fraser University.
+The team consisted of myself (Nicholas Fung) and Jass Bagga, Adam Dekleer, Ariana Williams and Cathy Yiu. <br><br>
+MedAssist is a iOS app that stores the user's medical-related data such as medications (and when to take them), doctor appointments, measurements (i.e. weight, blood pressure, blood suger, etc.) and provides services using this data. These services included visuals and analysis for the data, such as minimum/maximum/average for given time periods and graphical representation, as well as custom voice notifications to remind users of appointments and when to take medicines.<br><br>
+MedAssist was submitted and approved by Apple for distrubution via the app store. However it has since been removed due to insufficent interest and downloads.<br><br>
+Unfortunately, while this project was in development, the team made several decisions which I now know to be (very) bad decisions. This included improper used of version control, which resulted in only one team member (Ariana) having a complete project at the end of the course (she handled submitting to the App Store and SFU, so the copy she had was the final product produced by our team). That unfortunately means that the code in this repo is not the final version of MedAssist and has various bugs and partial features.
