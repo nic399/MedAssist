@@ -11,6 +11,7 @@
 #import "TSMDirective.h"
 #import "TSMAllergy.h"
 #import "TSMMedication.h"
+#import "TSMProfile.h"
 @implementation TSMAppDelegate
 sqlite3 * database;
 sqlite3_stmt* statement;
@@ -52,17 +53,17 @@ sqlite3_stmt* statement;
     
     
     
-    
-}
+            
+        }
 
 
-- (BOOL) saveUser:(NSString *)userName userId:(int64_t)userId;
+-(BOOL) saveUser:(NSString*)userName firstName:(NSString *)userFirstName lastName:(NSString *)userLastName hashedPass:(NSString *)hashedPass userEmail:(NSString *)userEmail gender:(NSString *)userGender hashedCarecard:(NSString *)hashedCarecard hashedInsurance1:(NSString *)hashedInsurance1 hashedInsurance2:(NSString *)hashedInsurance2 hashedInsurance3:(NSString *)hashedInsurance3 hashedInsurance4:(NSString *)hashedInsurance4 userId:(int64_t)userId;
 {
-    
+  
     const char *dbpath = [databasePath UTF8String];
     if (sqlite3_open(dbpath, &database) == SQLITE_OK)
     {
-        NSString *insertSQL = [NSString stringWithFormat:@"insert into user (userId,userName) values (\"%lld\",\"%@\")",userId,userName];
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into user (userId,userName,firstName,lastName,hashedPass,userEmail,gender,hashedCarecard,hashedInsurance1,hashedInsurance2,hashedInsurance3,hashedInsurance4) values (\"%lld\",\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%@\")",userId,userName,userFirstName,userLastName,hashedPass,userEmail,userGender,hashedCarecard,hashedInsurance1,hashedInsurance2,hashedInsurance3,hashedInsurance4];
         const char *insert_stmt = [insertSQL UTF8String];
         sqlite3_prepare_v2(database, insert_stmt,-1, &statement, NULL);
         if (sqlite3_step(statement) == SQLITE_DONE)
@@ -145,7 +146,47 @@ sqlite3_stmt* statement;
     return NO;
 }
 
-
+- (NSMutableArray*) retriveProfile
+{
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    _profileInfo=[[NSMutableArray alloc] init];
+    if (sqlite3_open(dbpath, &database) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat:
+                              @"SELECTuserName,firstName,lastName,hashedPass,userEmail,gender,hashedCarecard,hashedInsurance1,hashedInsurance2,hashedInsurance3,hashedInsurance4 FROM user WHERE userid=\"%d\"", 100];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        while (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            TSMProfile *profile;
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                profile.userName = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 1)];
+                profile.firstName = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 2)];
+                profile.lastName = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 3)];
+                profile.passwordHash = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 4)];
+                profile.email = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 5)];
+                profile.gender = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 6)];
+                profile.carecard  = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 7)];
+                NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+                tempArray[0] = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 8)];
+                tempArray[1] = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 9)];
+                tempArray[2] = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 10)];
+                tempArray[3] = [[NSString alloc] initWithUTF8String: (const char *) sqlite3_column_text(statement, 11)];
+                profile.healthInsuranceNumbers = [[NSMutableArray alloc] initWithArray:tempArray copyItems:TRUE];
+                
+                [_profileInfo addObject: profile];
+            } else {
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(database);
+    }
+    
+    return _profileInfo;
+}
 
 - (NSMutableArray*) findDirectives
 {
@@ -273,7 +314,7 @@ sqlite3_stmt* statement;
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

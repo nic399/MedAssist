@@ -10,6 +10,8 @@
 
 #import "TSMAppDelegate.h"
 
+NSMutableArray *profileSetup;
+
 int main(int argc, char * argv[])
 {
     @autoreleasepool {

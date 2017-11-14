@@ -7,7 +7,6 @@
 //
 
 #import "TSMHomePageViewController.h"
-#import "TSMAppDelegate.h"
 #import "TSMDBManager.h"
 
 @interface TSMHomePageViewController ()
@@ -19,10 +18,6 @@
 - (IBAction)unwindToHome:(UIStoryboardSegue *)unwindSegue
 {
 
-}
-
-- (IBAction)callEmergency:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel:----------"]];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,15 +33,8 @@
 {
     [super viewDidLoad];
     
-    // Check database for last email sent date
     
-    // void sendMail();
-    // NSDate *lastEmail = **** get last email date from database ****
-    // NSTimeInterval timeSinceLastEmail = [date timeIntervalSinceNow];
-    // if(timeSinceLastEmail<=-72576000){
-    //    sendMail();
-    // }
-    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,31 +53,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (void)sendMail
-{
-    mailComposer = [[MFMailComposeViewController alloc]init];
-    mailComposer.mailComposeDelegate = self;
-    [mailComposer setSubject:@"Your MedAssist Data"];
-    [mailComposer setMessageBody:@"Once Data entered, it will be here" isHTML:NO];
-     NSArray *toRecipients = [NSArray arrayWithObjects:@"firstMail@example.com", nil];
-    [mailComposer setToRecipients:toRecipients];
-     [self presentViewController:mailComposer animated:YES completion:nil];
-    
-    // Update last email sent date in database
-}
-     
-#pragma mark - mail compose delegate
-     -(void)mailComposeController:(MFMailComposeViewController *)controller
-             didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
-                 if (result) {
-                     NSLog(@"Result : %d",result);
-                 }
-                 if (error) {
-                     NSLog(@"Error : %@",error);
-                 }
-                 [self presentViewController:mailComposer animated:YES completion:nil];
-                 
-             }
 
 @end

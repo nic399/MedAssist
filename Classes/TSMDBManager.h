@@ -11,7 +11,7 @@
 
 @interface TSMDBManager : NSObject
 {
-    
+
     NSString *databasePath;
 }
 

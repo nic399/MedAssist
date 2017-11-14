@@ -11,6 +11,43 @@
 #import "TSMNotification.h"
 
 @implementation TSMProfile
+
+-(NSString *)passwordHash {
+    NSString * userPassphrase;
+    return NULL;
+}
+
+-(NSMutableArray *) healthInsuranceNumbers {
+    
+    return NULL;
+}
+
+-(NSDate *)birthDate {
+    
+    return NULL;
+}
+
+-(NSString *)carecard {
+    
+    return NULL;
+}
+
+-(void)setPasswordHash:(NSString *)hashedPass {
+    
+}
+
+-(void)setHealthInsuranceNumbers {
+    
+}
+
+-(void)setBirthdate {
+    
+}
+
+-(void)setCarecard:(NSString *)carecard {
+    
+}
+
 /*
 //Add a notification to the user's list of Notifications
 - (void)addNotification:(TSMNotification *)notification {
@@ -24,9 +61,9 @@
 */ 
 
 //Call the Profile's emergency contact
-- (void)callEmergencyContact {
-    return;
-}
+//- (void)callEmergencyContact {
+//    return;
+//}
 
 
 //Create a new Profile with empty properties
